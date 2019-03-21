@@ -436,12 +436,36 @@
 
     <!-- the div used to have a  display: inline-block style. Removed it trying to remove unwanted space on iOS 10 -->
     <tmpl><tr>
-      <td align="center" valign="top" style="font-size: 0"><div style="vertical-align:top; width:100%"><!--
+      <td align="left" valign="top" style="font-size: 0"><div style="vertical-align:top; width:100%"><!--
         --><table role="presentation" class="vb-content" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; width: 100%">
           {{replacedcontent}}
         </table></div></td>
     </tr></tmpl>
   </template>
+
+    <template tag="content_logo_block">
+      <def attr="width" selector="table" width="{{width}}"></def>
+      <def attr="width" selector="div" style="max-width: {{width}}px; -mru-width: 0px"></def>
+      <def attr="width-prop" selector="table" style="-ko-attr-width: @[{{width-prop}}]"></def>
+      <!-- uso la forma con espressione perchè mosaico ha un bug nella ricerca del valore di default e non lo cerca nella prop precedente -->
+      <def attr="width-prop" selector="div" style="-ko-max-width: @[{{width-prop}} + 'px']"></def>
+
+      <!-- border-spacing forzato per orange -->
+      <def attr="spacing" selector="table" cellspacing="{{spacing}}" style="mso-cellspacing: {{spacing}}px; border-spacing: {{spacing}}px"></def>
+      <def attr="align" selector="table" align="{{align}}"></def>
+      <def attr="text-align" selector="table" style="text-align: {{text-align}}"></def>
+
+      <def attr="class" selector="div" class="{{class}}"></def>
+      <def attr="td-styles" selector="td" style="{{td-styles}}"></def>
+
+      <!-- the div used to have a  display: inline-block style. Removed it trying to remove unwanted space on iOS 10 -->
+      <tmpl><tr>
+        <td align="left" valign="top" style="font-size: 0"><div style="vertical-align:top; width:100%"><!--
+          --><table role="presentation" class="vb-content" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; width: 100%">
+            {{replacedcontent}}
+          </table></div></td>
+      </tr></tmpl>
+    </template>
 
 
   <template tag="column-content">
@@ -817,16 +841,16 @@
 
     <block name="logoBlock" label="Logo Block">
       <block-inner if="externalBackgroundVisible" inner-padding="9" inner-class="vb-row">
-        <content width="276" spacing="9" width-prop="18 + Math.round(imageWidth)">
+        <content_logo_block width="276" spacing="9" width-prop="18 + Math.round(imageWidth)">
           <linked-img width="258" placeholder-height="150" width-prop="imageWidth"
             src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=258%2C150" editable="image"></linked-img>
-        </content>
+        </content_logo_block>
       </block-inner>
       <block-inner false if="externalBackgroundVisible eq false" inner-padding="9" inner-class="vb-row">
-        <content width="276" spacing="9" width-prop="18 + Math.round(imageWidth)">
+        <content_logo_block width="276" spacing="9" width-prop="18 + Math.round(imageWidth)">
           <linked-img width="258" placeholder-height="150" width-prop="imageWidth"
             src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=258%2C150" editable="image"></linked-img>
-        </content>
+        </content_logo_block>
       </block-inner>
     </block>
 
