@@ -52,7 +52,7 @@
         options: [profile_link]=Profile|[unsubscribe_link]=Unsubscribe|none=None;
         help: If -None- is selected, preHeader text will be shown;
       }
-     
+
       hrStyle { label: Separator Style;properties:color hrWidth hrHeight; }
       hrStyle:preview { height: 200%; width: 200%; bottom: 20px; -ko-border-bottom: @[hrHeight]px solid @color; }
       preheaderVisible { label: Show Preheader; extend: visible; help: Preheader block is the first one on the top of the page. It contains web version link and optionally unsubscribe link or a preheader text that will be shown as a preview on some email clients; }
@@ -63,7 +63,7 @@
       image { label: Image; properties: src url alt }
       backgroundColor { label: Background Color; extend: color }
       buttonLink { label: Button; extend: link }
-      
+
       /* texts and links */
       textStyle { label: Text; properties: face color size align }
       textStyle:preview { -ko-bind-text: @['AaZz']; -ko-font-family: @face; -ko-color: @color; -ko-font-size: @[size]px; }
@@ -78,7 +78,7 @@
 
       externalTextStyle { label: Alternative Text; extend: textStyle }
       externalTextStyle:preview { -ko-bind-text: @['AaZz']; -ko-font-family: @face; -ko-color: @color; -ko-font-size: @[size]px; }
-     
+
       bigTitleStyle { label: Title; properties: face color size align}
       bigTitleStyle:preview { -ko-bind-text: @['AaZz']; -ko-font-family: @face; -ko-color: @color; -ko-font-size: @[size]px; }
       /* buttons */
@@ -86,7 +86,7 @@
       buttonStyle size { label: Text Size; extend: size }
       buttonStyle { label: Button; properties: face color size align buttonColor radius }
       buttonStyle:preview { -ko-bind-text: @['Button']; -ko-font-family: @face; -ko-color: @color; -ko-font-size: @[size]px; -ko-background-color: @buttonColor; padding-left: 5px; -ko-border-radius: @[radius]px; }
-      
+
       /* contents */
       preheaderText {label: PreHeader Text; extend:text; help: This text will be shown on some email clients as a preview of the email contents;}
       leftImage { label: Left Image; extend: image }
@@ -114,7 +114,7 @@
       template { label: Page; theme: frameTheme; properties: preheaderVisible=true; version: 1.1.19; }
 
       footerBlock { label: Unsubscribe Block; theme: frameTheme }
-      
+
       fbVisible { label: Facebook; extend: visible }
       twVisible { label: Twitter; extend: visible }
       ggVisible { label: Google+; extend: visible }
@@ -176,7 +176,7 @@
         variant: shareButtonType;
         theme: contentTheme;
       }
-      
+
       preheaderBlock { label:Preheader Block;  theme: frameTheme}
 
       sideArticleBlock imagePos {label:Image position;widget:select; options: left=Left|right=Right; }
@@ -194,11 +194,11 @@
       doubleArticleBlock { label: 2 Columns Block; properties: backgroundColor titleVisible=true buttonVisible=true imageVisible=true fixedImageHeightVisible=true titleTextStyle longTextStyle buttonStyle  leftImage  leftLongText leftButtonLink rightImage  rightLongText rightButtonLink; theme: contentTheme}
 
       tripleArticleBlock { label: 3 Columns Block; properties: backgroundColor titleVisible=true buttonVisible=true imageVisible=true fixedImageHeightVisible=true titleTextStyle longTextStyle buttonStyle  leftImage  leftLongText leftButtonLink middleImage  middleLongText middleButtonLink rightImage  rightLongText rightButtonLink; theme: contentTheme}
-      
+
       logoBlock longTextStyle { label: Alternative Text; }
       logoBlock imageWidth { label: Image Size; widget: select; options: 166=Small|258=Medium|350=Big }
       logoBlock { label: Logo Block; properties: externalBackgroundVisible=true image imageWidth=258; variant: externalBackgroundVisible; theme: contentTheme}
-      
+
       titleBlock { label: Title; theme: contentTheme}
 
       imageBlock longTextStyle { label: Alternative Text; }
@@ -273,7 +273,7 @@
       .mobile-hide { display: none !important; }
       .mobile-textcenter { text-align: center !important; }
 
-      .mobile-full { 
+      .mobile-full {
         width: 100% !important;
         max-width: none !important;
       }
@@ -281,8 +281,8 @@
     /* previously used also screen and (max-device-width: 600px) but Yahoo Mail doesn't support multiple queries */
   </style>
   <style type="text/css" data-inline="true">
-    [data-ko-block=tripleArticleBlock] .links-color a, 
-    [data-ko-block=tripleArticleBlock] .links-color a:link, 
+    [data-ko-block=tripleArticleBlock] .links-color a,
+    [data-ko-block=tripleArticleBlock] .links-color a:link,
     [data-ko-block=tripleArticleBlock] .links-color a:visited,
     [data-ko-block=tripleArticleBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -290,8 +290,8 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=doubleArticleBlock] .links-color a, 
-    [data-ko-block=doubleArticleBlock] .links-color a:link, 
+    [data-ko-block=doubleArticleBlock] .links-color a,
+    [data-ko-block=doubleArticleBlock] .links-color a:link,
     [data-ko-block=doubleArticleBlock] .links-color a:visited,
     [data-ko-block=doubleArticleBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -299,8 +299,8 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=singleArticleBlock] .links-color a, 
-    [data-ko-block=singleArticleBlock] .links-color a:link, 
+    [data-ko-block=singleArticleBlock] .links-color a,
+    [data-ko-block=singleArticleBlock] .links-color a:link,
     [data-ko-block=singleArticleBlock] .links-color a:visited,
     [data-ko-block=singleArticleBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -308,8 +308,8 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=textBlock] .links-color a, 
-    [data-ko-block=textBlock] .links-color a:link, 
+    [data-ko-block=textBlock] .links-color a,
+    [data-ko-block=textBlock] .links-color a:link,
     [data-ko-block=textBlock] .links-color a:visited,
     [data-ko-block=textBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -317,8 +317,8 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=sideArticleBlock] .links-color a, 
-    [data-ko-block=sideArticleBlock] .links-color a:link, 
+    [data-ko-block=sideArticleBlock] .links-color a,
+    [data-ko-block=sideArticleBlock] .links-color a:link,
     [data-ko-block=sideArticleBlock] .links-color a:visited,
     [data-ko-block=sideArticleBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -326,8 +326,8 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=socialBlock] .links-color a, 
-    [data-ko-block=socialBlock] .links-color a:link, 
+    [data-ko-block=socialBlock] .links-color a,
+    [data-ko-block=socialBlock] .links-color a:link,
     [data-ko-block=socialBlock] .links-color a:visited,
     [data-ko-block=socialBlock] .links-color a:hover {
       color: #cccccc;
@@ -335,8 +335,8 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=footerBlock] .links-color a, 
-    [data-ko-block=footerBlock] .links-color a:link, 
+    [data-ko-block=footerBlock] .links-color a,
+    [data-ko-block=footerBlock] .links-color a:link,
     [data-ko-block=footerBlock] .links-color a:visited,
     [data-ko-block=footerBlock] .links-color a:hover {
       color: #cccccc;
@@ -551,7 +551,7 @@
 
     <def attr="padding-bottom" selector="td" style="padding-bottom: {{padding-bottom}}px"></def>
 
-    <def attr="editable" selector="a" data-ko-link="{{editable}}.url"></def> 
+    <def attr="editable" selector="a" data-ko-link="{{editable}}.url"></def>
     <def attr="editable" selector="img" data-ko-editable="{{editable}}.src" style="-ko-attr-alt: @[{{editable}}.alt == '' ? null : {{editable}}.alt]"></def>
 
     <def attr="content" selector="a" style="-ko-attr-href: @{{content}}.url"></def>
@@ -789,7 +789,7 @@
     </block>
 -->
 
-  <!-- Note: 
+  <!-- Note:
     the conditional comment around the body tag (and /body) is to hide the whole tag to windows 10 mail to prevent really weird bugs with windows 10 mail.
     the conditional comment also remove the tag from Outlook 2016 and following versions, as they share the same version of windows 10 mail.
   -->
@@ -805,7 +805,7 @@
   <div data-ko-display="preheaderVisible" data-ko-wrap="false">
 
     <block name="preheaderBlock" label="Preheader Block" theme="frameTheme">
-      <div data-ko-display="preheaderLinkOption neq 'none'" style="display: none; font-size:1px; line-height: 1px; max-height:0px; max-width: 0px; opacity: 0; overflow: hidden; 
+      <div data-ko-display="preheaderLinkOption neq 'none'" style="display: none; font-size:1px; line-height: 1px; max-height:0px; max-width: 0px; opacity: 0; overflow: hidden;
           -ko-bind-text: @preheaderText"></div>
       <block-inner inner-padding="0" inner-class="vb-row">
         <columns td-styles="padding: 0 9px"><!--
@@ -959,7 +959,7 @@
             --><column-content spacing="9" width="276">
               <linked-img if="fixedImageHeightVisible" editable="{{repeat}}Image" width="258" height="180" height-prop="imageHeight"
                 src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=258%2C180"></linked-img>
-              <linked-img false if="fixedImageHeightVisible eq false" editable="{{repeat}}Image" width="258" placeholder-height="180" 
+              <linked-img false if="fixedImageHeightVisible eq false" editable="{{repeat}}Image" width="258" placeholder-height="180"
                 src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=258%2C180"></linked-img>
             </column-content><!--
       --></repeater></columns>
@@ -1080,15 +1080,4 @@
     </block>
 
   </div>
-
-  <block name="footerBlock" label="Unsubscribe Block" theme="frameTheme">
-    <block-inner inner-padding="0" inner-class="vb-row">
-      <content spacing="9" width="552" td-styles="padding: 0 9px">
-        <long-text editable="longText" fixed-align="center"><p>Email sent to <a href="mailto:[mail]">[mail]</a></p></long-text>
-        <linked-text align="center" href="[unsubscribe_link]" editable="disiscrivitiText"
-          color-prop="Color.readability(linkStyle.color, backgroundColor) gt 2 ? linkStyle.color : (Color.isReadable('#ffffff', backgroundColor) ? '#ffffff' : '#000000')">Unsubscribe</linked-text>
-        <linked-img width="170" align="center" false if="_root_.sponsor.visible" content="_root_.sponsor" src="img/sponsor.gif" alt="sponsor" />
-      </content>
-    </block-inner>
-  </block>
 </center><!--[if !(gte mso 16)]--></body><!--<![endif]--></html>
