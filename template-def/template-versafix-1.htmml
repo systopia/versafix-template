@@ -138,7 +138,7 @@
         max: 20;
         help: Attention - this property is not supported on all email clients (i.e. Outlook)
       }
-      face { label: Font; widget: select; options: Arial, Helvetica, sans-serif=Arial|Arial Black, Arial Black, Gadget, sans-serif=Arial Black|Comic Sans MS, Comic Sans MS5, cursive=Comic Sans|Courier New, Courier New, monospace=Courier|Georgia, serif=Georgia|Impact, sans-serif=Impact|Lucida Console, Monaco, monospace=Lucida Console|Lucida Sans Unicode, Lucida Grande, sans-serif=Lucida Sans Unicode|Times New Roman, Times, serif=Times New Roman|Verdana, Geneva, sans-serif=Verdana|Amnesty Trade Gothic|Amnesty Trade Gothic Cn|Amnesty Trade Gothic normal|Amnesty Trade Gothic Light}
+      face { label: Font; widget: select; options: Arial, Helvetica, sans-serif=Arial|Arial Black, Arial Black, Gadget, sans-serif=Arial Black|Comic Sans MS, Comic Sans MS5, cursive=Comic Sans|Courier New, Courier New, monospace=Courier|Georgia, serif=Georgia|Impact, sans-serif=Impact|Lucida Console, Monaco, monospace=Lucida Console|Lucida Sans Unicode, Lucida Grande, sans-serif=Lucida Sans Unicode|Times New Roman, Times, serif=Times New Roman|Verdana, Geneva, sans-serif=Verdana|Amnesty Trade Gothic|Amnesty Trade Gothic Cn|Amnesty Trade Gothic Light}
       decoration { label: Decoration; widget: select; options: none=None|underline=Underline }
       linksColor { label: Link Color; extend: color }
       linksDecoration { label: Underlined Links?; extend: decoration }
