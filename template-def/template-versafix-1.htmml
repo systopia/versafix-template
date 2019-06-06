@@ -6,6 +6,28 @@
   <meta name="format-detection" content="telephone=no">
   <title style="-ko-bind-text: @titleText">TITLE</title>
   <style type="text/css">
+  @font-face {
+      font-family: 'Open Sans';
+      src: url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.eot');
+      src: url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+          url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.woff2') format('woff2'),
+          url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.woff') format('woff'),
+          url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.ttf') format('truetype'),
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'Open Sans Light';
+      src: url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.eot');
+      src: url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+          url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.woff2') format('woff2'),
+          url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.woff') format('woff'),
+          url('http://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.ttf') format('truetype'),
+      font-weight: 300;
+      font-style: normal;
+  }
+
     @supports -ko-blockdefs {
       id { widget: id }
       size { label: Size; widget: select; options: 8|9|10|11|12|13|14|15|16|18|20|22|25|28|31; }
@@ -17,7 +39,7 @@
         max: 20;
         help: Attention - this property is not supported on all email clients (i.e. Outlook)
       }
-      face { label: Font; widget: select; options: Arial, Helvetica, sans-serif=Arial|Arial Black, Arial Black, Gadget, sans-serif=Arial Black|Comic Sans MS, Comic Sans MS5, cursive=Comic Sans|Courier New, Courier New, monospace=Courier|Georgia, serif=Georgia|Impact, sans-serif=Impact|Lucida Console, Monaco, monospace=Lucida Console|Lucida Sans Unicode, Lucida Grande, sans-serif=Lucida Sans Unicode|Times New Roman, Times, serif=Times New Roman|Verdana, Geneva, sans-serif=Verdana}
+      face { label: Font; widget: select; options: Arial, Helvetica, sans-serif=Arial|Arial Black, Arial Black, Gadget, sans-serif=Arial Black|Comic Sans MS, Comic Sans MS5, cursive=Comic Sans|Courier New, Courier New, monospace=Courier|Georgia, serif=Georgia|Impact, sans-serif=Impact|Lucida Console, Monaco, monospace=Lucida Console|Lucida Sans Unicode, Lucida Grande, sans-serif=Lucida Sans Unicode|Times New Roman, Times, serif=Times New Roman|Verdana, Geneva, sans-serif=Verdana|Open Sans|Open Sans Light}
       decoration { label: Decoration; widget: select; options: none=None|underline=Underline }
       linksColor { label: Link Color; extend: color }
       linksDecoration { label: Underlined Links?; extend: decoration }
