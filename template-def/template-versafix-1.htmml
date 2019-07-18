@@ -529,6 +529,7 @@
       </table></div><!--
     --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->{{#if}}</div>{{/if}}</tmpl>
   </template>
+  
 
   <template tag="columns">
     <def attr="autowidth"></def>
@@ -562,7 +563,7 @@
     <!-- the div used to have a  display: inline-block style. Removed it trying to remove unwanted space on iOS 10 -->
     <tmpl><tr>
       <td align="left" valign="top" style="font-size: 0"><div style="vertical-align:top; width:100%"><!--
-        --><table role="presentation" class="vb-content" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; width: 100%">
+        --><table role="presentation" class="vb-content"   border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; width: 100%">
           {{replacedcontent}}
         </table></div></td>
     </tr></tmpl>
@@ -586,7 +587,7 @@
       <!-- the div used to have a  display: inline-block style. Removed it trying to remove unwanted space on iOS 10 -->
       <tmpl><tr>
         <td align="left" valign="top" style="font-size: 0"><div style="vertical-align:top; width:100%"><!--
-          --><table role="presentation" class="vb-content" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; width: 100%">
+        --><table role="presentation" class="vb-content" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; width: 100%">
             {{replacedcontent}}
           </table></div></td>
       </tr></tmpl>
@@ -970,14 +971,14 @@
   <div data-ko-container="main" data-ko-wrap="false">
 
     <block name="logoBlock" label="Logo Block">
-      <block-inner if="externalBackgroundVisible" inner-padding="9" inner-class="vb-row">
-        <content_logo_block width="276" spacing="9" width-prop="18 + Math.round(imageWidth)">
+      <block-inner if="externalBackgroundVisible" inner-padding="0" inner-class="vb-row">
+        <content_logo_block width="276" spacing="0" width-prop="18 + Math.round(imageWidth)">
           <linked-img width="258" placeholder-height="150" width-prop="imageWidth"
             src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=258%2C150" editable="image"></linked-img>
         </content_logo_block>
       </block-inner>
       <block-inner false if="externalBackgroundVisible eq false" inner-padding="9" inner-class="vb-row">
-        <content_logo_block width="276" spacing="9" width-prop="18 + Math.round(imageWidth)">
+        <content_logo_block width="276" spacing="0" width-prop="18 + Math.round(imageWidth)">
           <linked-img width="258" placeholder-height="150" width-prop="imageWidth"
             src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=258%2C150" editable="image"></linked-img>
         </content_logo_block>
