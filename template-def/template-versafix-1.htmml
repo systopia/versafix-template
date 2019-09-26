@@ -169,6 +169,12 @@
         theme: frameTheme
       }
 
+      footerProVegBlock {
+        label: Proveg Footer Block;
+        properties: longTextStyle leftLongText middleLongText rightLongText backgroundColor;
+        theme: frameTheme
+      }
+
       bigSocialBlock {
         label: Big Social Block;
         properties: bigSocialIconType=rdcol bigSocialIconSize=48 fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=true inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=true instUrl youVisible=true youUrl longTextStyle longText;
@@ -251,6 +257,7 @@
       titleBlock:preview,
       footerBlock:preview,
       socialBlock:preview,
+      footerProVegBlock:preview,
       buttonBlock:preview,
       twoButtonBlock:preview,
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
@@ -354,6 +361,15 @@
     [data-ko-block=socialBlock] .links-color a:link,
     [data-ko-block=socialBlock] .links-color a:visited,
     [data-ko-block=socialBlock] .links-color a:hover {
+      color: #cccccc;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+
+    [data-ko-block=footerProVegBlock] .links-color a,
+    [data-ko-block=footerProVegBlock] .links-color a:link,
+    [data-ko-block=footerProVegBlock] .links-color a:visited,
+    [data-ko-block=footerProVegBlock] .links-color a:hover {
       color: #cccccc;
       -ko-color: @longTextStyle.linksColor;
       text-decoration: underline;
@@ -1109,6 +1125,22 @@
                 <social-icon {{default}}="{{prefix}}Visible" href-prop="{{prefix}}Url" color="#818181" src="img/icons/{{prefix}}-bw-96.png" alt="{{name}}"></social-icon>
               </repeater>
             </custom-row>
+          </column-content><!--
+        --></columns>
+      </block-inner>
+    </block>
+
+    <block name="footerProVegBlock" label="proVeg Footer Block" theme="frameTheme">
+      <block-inner inner-padding="9" inner-class="vb-row">
+        <columns><!--
+        --><column-content width="181" spacing="9">
+            <long-text fixed-align="center" editable="leftLongText">Columns 1</p></long-text>
+          </column-content><!--
+          --><column-content width="181" spacing="9">
+            <long-text fixed-align="center" editable="middleLongText">Columns 2</p></long-text>
+          </column-content><!--
+          --><column-content width="181" spacing="9">
+            <long-text fixed-align="center" editable="rightLongText">Columns 3</p></long-text>
           </column-content><!--
         --></columns>
       </block-inner>
