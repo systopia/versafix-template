@@ -233,6 +233,7 @@
       tripleImageBlock { label: Three Image Gallery;properties:gutterVisible=false fixedImageHeightVisible=true; variant: gutterVisible; theme: contentTheme}
 
       buttonBlock { label: Button Block; theme: contentTheme}
+      twoButtonBlock { label: 2 Button Block; properties: leftButtonLink rightButtonLink; theme: contentTheme}
       hrBlock { label: Separator Block;  theme: contentTheme}
       /* imageSeparatorBlock { label: Image Separator Block;  theme: contentTheme} */
       spacerBlock { label: Spacer Block; properties: externalBackgroundVisible=true; theme: contentTheme}
@@ -251,6 +252,7 @@
       footerBlock:preview,
       socialBlock:preview,
       buttonBlock:preview,
+      twoButtonBlock:preview,
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
     }
   </style>
@@ -951,6 +953,17 @@
     <block name="buttonBlock" label="Button Block">
       <block-inner inner-padding="18" inner-class="vb-container">
         <btn editable="link" inner-padding="12" align="center" inner-hpadding="14px" size="22px" style="bigButtonStyle">BUTTON</btn>
+      </block-inner>
+    </block>
+
+
+    <block name="twoButtonBlock" label="2 Button Block">
+      <block-inner inner-padding="9" inner-class="vb-row">
+        <columns><repeater repeat="left,right"><!--
+            --><column-content spacing="9" width="276">
+              <btn editable="{{repeat}}ButtonLink" inner-padding="12" align="center" inner-hpadding="14px" size="22px" style="bigButtonStyle">BUTTON</btn>
+          </column-content><!--
+        --></repeater></columns>
       </block-inner>
     </block>
 
