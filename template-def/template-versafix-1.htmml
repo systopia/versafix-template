@@ -207,22 +207,22 @@
 
   @font-face {
       font-family: 'Open Sans';
-      src: url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.eot');
-      src: url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-          url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.woff2') format('woff2'),
-          url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.woff') format('woff'),
-          url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.ttf') format('truetype'),
+      src: url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.eot');
+      src: url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+          url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.woff2') format('woff2'),
+          url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.woff') format('woff'),
+          url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Regular.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
   }
 
   @font-face {
       font-family: 'Open Sans Light';
-      src: url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.eot');
-      src: url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
-          url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.woff2') format('woff2'),
-          url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.woff') format('woff'),
-          url('https://crmtest.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.ttf') format('truetype'),
+      src: url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.eot');
+      src: url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+          url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.woff2') format('woff2'),
+          url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.woff') format('woff'),
+          url('https://crm.proveg.com/sites/default/files/civicrm/persist/fonts/open_sans/OpenSans-Light.ttf') format('truetype');
       font-weight: 300;
       font-style: normal;
   }
