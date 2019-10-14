@@ -13,7 +13,7 @@
       src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.eot?#iefix') format('embedded-opentype'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.woff2') format('woff2'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.ttf') format('truetype'),
+          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
   }
@@ -24,7 +24,7 @@
       src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.eot?#iefix') format('embedded-opentype'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.woff2') format('woff2'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.ttf') format('truetype'),
+          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
   }
@@ -35,7 +35,7 @@
       src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.eot?#iefix') format('embedded-opentype'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.woff2') format('woff2'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.ttf') format('truetype'),
+          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
   }
@@ -46,7 +46,7 @@
       src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.eot?#iefix') format('embedded-opentype'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.woff2') format('woff2'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.ttf') format('truetype'),
+          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
   }
@@ -57,7 +57,7 @@
       src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.eot?#iefix') format('embedded-opentype'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.woff2') format('woff2'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.ttf') format('truetype'),
+          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
   }
@@ -68,7 +68,7 @@
       src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.eot?#iefix') format('embedded-opentype'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.woff2') format('woff2'),
           url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.ttf') format('truetype'),
+          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
   }
@@ -140,6 +140,7 @@
       linkStyle:preview { -ko-bind-text: @['Link']; -ko-font-size: @[size]px; -ko-font-family: @face; -ko-color: @color; -ko-text-decoration: @[decoration] }
       longTextStyle { label: Paragraph; properties: face color size lineHeight align linksColor   }
       longTextStyle:preview { -ko-bind-text: @['AaZz']; -ko-font-family: @face; -ko-color: @color; -ko-font-size: @[size]px; }
+
       bigButtonStyle { label: Big Button; extend: buttonStyle }
       titleTextStyle { label: Title; extend: textStyle }
       /* background */
@@ -169,6 +170,7 @@
       rightButtonLink { label: Right Button; extend: buttonLink }
       webversionText{ label: Web Link Text; extend: text;}
       unsubscribeText{ label: Unsubscribe Link; extend: text;}
+      logoImage { label: Logo Image; extend: image }
 
       titleVisible { label: Show Title; extend: visible; }
       buttonVisible { label: Show Button; extend: visible; }
@@ -181,8 +183,6 @@
       template preheaderText { label: Preheader; }
 
       template { label: Page; theme: frameTheme; properties: preheaderVisible=true; version: 1.1.19; }
-
-      footerBlock { label: Unsubscribe Block; theme: frameTheme }
 
       fbVisible { label: Facebook; extend: visible }
       twVisible { label: Twitter; extend: visible }
@@ -212,6 +212,13 @@
       socialBlock {
         label: Social Block;
         properties: socialIconType=colors fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=false inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=false instUrl youVisible=false youUrl longTextStyle longText backgroundColor;
+        variant:socialIconType;
+        theme: frameTheme
+      }
+
+      footerBlock {
+        label: Giga Footer Block;
+        properties: socialIconType=colors fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=false inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=false instUrl youVisible=false youUrl longTextStyle leftLongText rightLongText backgroundColor logoImage;
         variant:socialIconType;
         theme: frameTheme
       }
@@ -437,6 +444,7 @@
       -ko-color: @longTextStyle.linksColor;
       text-decoration: underline;
     }
+
   </style>
   <template-def>
 
@@ -607,7 +615,6 @@
     <def attr="content" selector="td" style="-ko-bind-text: @{{content}}"></def>
     <tmpl><tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal">{{replacedcontent}}</td></tr></tmpl>
   </template>
-
 
   <template tag="linked-img">
     <def attr="if" selector="tr" data-ko-display="{{if}}"></def>
@@ -1145,6 +1152,33 @@
             </custom-row>
           </column-content><!--
         --></columns>
+      </block-inner>
+    </block>
+
+    <block name="footerBlock" label="Giga Footer Block" theme="frameTheme">
+      <block-inner inner-padding="9" inner-class="vb-row">
+        <divider width="100" height="1" style="hrStyle"></divider>
+        <columns><!--
+          --><column-content width="276" spacing="9">
+            <long-text fixed-align="left" editable="leftLongText"><p>GIGA German Institute of Global and Area Studies</p><p>Leibniz-Institut für Globale und Regionale Studien</p></long-text>
+            <linked-img editable="logoImage" align="left" width="140" height="41" height-prop="imageHeight"
+              src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=166%2C160"></linked-img>
+          </column-content><!--
+          --><column-content width="276" spacing="9">
+            <long-text fixed-align="left" editable="rightLongText"><p>Neuer Jungfernsteg 21 | 20354 Hamburg</p><p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a> |<a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p></long-text>
+            <custom-row if="socialIconType eq 'colors'" align="right" class="links-color socialLinks mobile-textcenter">
+              <repeater prefix="fb,tw,gg,web,wa,tg,in,pi,fl,vi,inst,you" default="if,if,if,false if,false if,false if,false if,false if,false if,false if,false if,false if" color="#3b5998,#4099FF,#d34836,#606060,#25d366,#2da5e1,#007bb6,#C92228,#ff0084,#45bbff,#bc2a8d,#cd201f" name="Facebook,Twitter,Google,Web,Whatsapp,Telegram,Linkedin,Pinterest,Flickr,Vimeo,Instagram,Youtube">
+                <social-icon {{default}}="{{prefix}}Visible" href-prop="{{prefix}}Url" color="{{color}}" src="img/icons/{{prefix}}-colors-96.png" alt="{{name}}"></social-icon>
+              </repeater>
+            </custom-row>
+            <custom-row false if="socialIconType eq 'bw'" align="right" class="links-color socialLinks mobile-textcenter">
+              <repeater prefix="fb,tw,gg,web,wa,tg,in,pi,fl,vi,inst,you" default="if,if,if,false if,false if,false if,false if,false if,false if,false if,false if,false if" color="#3b5998,#4099FF,#d34836,#606060,#25d366,#2da5e1,#007bb6,#C92228,#ff0084,#45bbff,#bc2a8d,#cd201f" name="Facebook,Twitter,Google,Web,Whatsapp,Telegram,Linkedin,Pinterest,Flickr,Vimeo,Instagram,Youtube">
+                <social-icon {{default}}="{{prefix}}Visible" href-prop="{{prefix}}Url" color="#818181" src="img/icons/{{prefix}}-bw-96.png" alt="{{name}}"></social-icon>
+              </repeater>
+            </custom-row>
+          </column-content><!--
+        --></columns>
+        <divider width="100" height="1" style="hrStyle"></divider>
       </block-inner>
     </block>
 
