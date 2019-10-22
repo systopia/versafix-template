@@ -77,7 +77,7 @@
 
     @supports -ko-blockdefs {
       id { widget: id }
-      size { label: Size; widget: select; options: 8|9|10|11|12|13|14|15|16|18|20|22|25|28|31; }
+      size { label: Size; widget: select; options: 8|9|10|11|12|13|14|15|16|18|20|22|24|25|28|31; }
       visible { label: Visible?; widget: boolean }
       color { label: Color; widget: color }
       radius {
@@ -143,6 +143,8 @@
 
       bigButtonStyle { label: Big Button; extend: buttonStyle }
       titleTextStyle { label: Title; extend: textStyle }
+
+      gigaTitleTextStyle { label: Title; extend: longTextStyle }
       /* background */
       externalBackgroundColor { label: External Background; extend: color }
 
@@ -260,6 +262,7 @@
       sideArticleBlock { label: Image+Text Block; properties: backgroundColor titleVisible=true buttonVisible=true imageWidth=166 imagePos=left titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; variant:imagePos; theme: contentTheme }
 
       textBlock { label: Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
+      gigaQuotedTextBlock { label: Giga Quoted Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
 
       singleArticleBlock imageWidth { label: Image Size; widget: select; options: 166=Small|258=Medium|350=Big|534=Full }
       singleArticleBlock { label: Image/Text Block; properties: titleVisible=true buttonVisible=true imageVisible=true imageWidth=534 titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; theme: contentTheme}
@@ -276,6 +279,7 @@
       logoBlock { label: Logo Block; properties: externalBackgroundVisible=true image imageWidth=258; variant: externalBackgroundVisible; theme: contentTheme}
 
       titleBlock { label: Title; theme: contentTheme}
+      gigaTitleBlock { label: Giga Title; theme: contentTheme}
 
       imageBlock longTextStyle { label: Alternative Text; }
       imageBlock { label: Image; properties: gutterVisible=false; variant: gutterVisible; theme: contentTheme }
@@ -298,14 +302,17 @@
       hrBlock:preview,
       sideArticleBlock:preview,
       textBlock:preview,
+      gigaQuotedTextBlock:preview,
       singleArticleBlock:preview,
       doubleArticleBlock:preview,
       tripleArticleBlock:preview,
       titleBlock:preview,
+      gigaTitleBlock:preview,
       footerBlock:preview,
       socialBlock:preview,
       buttonBlock:preview,
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
+      gigaTitleBlock:preview { -ko-background-color: @[backgroundColor] }
     }
   </style>
   <style type="text/css" data-inline="true">
@@ -388,6 +395,24 @@
     [data-ko-block=textBlock] .links-color a:link,
     [data-ko-block=textBlock] .links-color a:visited,
     [data-ko-block=textBlock] .links-color a:hover {
+      color: #3f3f3f;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+
+    [data-ko-block=gigaQuotedTextBlock] .links-color a,
+    [data-ko-block=gigaQuotedTextBlock] .links-color a:link,
+    [data-ko-block=gigaQuotedTextBlock] .links-color a:visited,
+    [data-ko-block=gigaQuotedTextBlock] .links-color a:hover {
+      color: #3f3f3f;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+
+    [data-ko-block=gigaTitleBlock] .links-color a,
+    [data-ko-block=gigaTitleBlock] .links-color a:link,
+    [data-ko-block=gigaTitleBlock] .links-color a:visited,
+    [data-ko-block=gigaTitleBlock] .links-color a:hover {
       color: #3f3f3f;
       -ko-color: @longTextStyle.linksColor;
       text-decoration: underline;
@@ -650,6 +675,29 @@
     
 
     
+    <!-- gigaTitleBlock -->
+    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="gigaTitleBlock">
+      <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+      <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-row">
+        
+        <tr>
+      <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align:top; width:100%; max-width: 552px; -mru-width: 0px"><!--
+        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
+          
+          <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="text">Giga Section Title</td></tr>
+        
+        </table></div></td>
+    </tr>
+      
+      </table></div><!--
+    --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+    </td></tr>
+    </table>
+    <!-- /gigaTitleBlock -->
+    
+
+    
     <!-- textBlock -->
     <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="textBlock">
       <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
@@ -664,6 +712,23 @@
     </td></tr>
     </table>
     <!-- /textBlock -->
+    
+
+    
+    <!-- gigaQuotedTextBlock -->
+    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="gigaQuotedTextBlock">
+      <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+      <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-container">
+        
+        <tr><td class="long-text-quoted links-color" width="100%" valign="top" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>
+          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></td></tr>
+      
+      </table></div><!--
+    --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+    </td></tr>
+    </table>
+    <!-- /gigaQuotedTextBlock -->
     
 
     

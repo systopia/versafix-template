@@ -77,7 +77,7 @@
 
     @supports -ko-blockdefs {
       id { widget: id }
-      size { label: Size; widget: select; options: 8|9|10|11|12|13|14|15|16|18|20|22|25|28|31; }
+      size { label: Size; widget: select; options: 8|9|10|11|12|13|14|15|16|18|20|22|24|25|28|31; }
       visible { label: Visible?; widget: boolean }
       color { label: Color; widget: color }
       radius {
@@ -143,6 +143,8 @@
 
       bigButtonStyle { label: Big Button; extend: buttonStyle }
       titleTextStyle { label: Title; extend: textStyle }
+
+      gigaTitleTextStyle { label: Title; extend: longTextStyle }
       /* background */
       externalBackgroundColor { label: External Background; extend: color }
 
@@ -260,6 +262,7 @@
       sideArticleBlock { label: Image+Text Block; properties: backgroundColor titleVisible=true buttonVisible=true imageWidth=166 imagePos=left titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; variant:imagePos; theme: contentTheme }
 
       textBlock { label: Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
+      gigaQuotedTextBlock { label: Giga Quoted Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
 
       singleArticleBlock imageWidth { label: Image Size; widget: select; options: 166=Small|258=Medium|350=Big|534=Full }
       singleArticleBlock { label: Image/Text Block; properties: titleVisible=true buttonVisible=true imageVisible=true imageWidth=534 titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; theme: contentTheme}
@@ -276,6 +279,7 @@
       logoBlock { label: Logo Block; properties: externalBackgroundVisible=true image imageWidth=258; variant: externalBackgroundVisible; theme: contentTheme}
 
       titleBlock { label: Title; theme: contentTheme}
+      gigaTitleBlock { label: Giga Title; theme: contentTheme}
 
       imageBlock longTextStyle { label: Alternative Text; }
       imageBlock { label: Image; properties: gutterVisible=false; variant: gutterVisible; theme: contentTheme }
@@ -298,14 +302,17 @@
       hrBlock:preview,
       sideArticleBlock:preview,
       textBlock:preview,
+      gigaQuotedTextBlock:preview,
       singleArticleBlock:preview,
       doubleArticleBlock:preview,
       tripleArticleBlock:preview,
       titleBlock:preview,
+      gigaTitleBlock:preview,
       footerBlock:preview,
       socialBlock:preview,
       buttonBlock:preview,
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
+      gigaTitleBlock:preview { -ko-background-color: @[backgroundColor] }
     }
   </style>
   <style type="text/css" data-inline="true">
@@ -388,6 +395,24 @@
     [data-ko-block=textBlock] .links-color a:link,
     [data-ko-block=textBlock] .links-color a:visited,
     [data-ko-block=textBlock] .links-color a:hover {
+      color: #3f3f3f;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+
+    [data-ko-block=gigaQuotedTextBlock] .links-color a,
+    [data-ko-block=gigaQuotedTextBlock] .links-color a:link,
+    [data-ko-block=gigaQuotedTextBlock] .links-color a:visited,
+    [data-ko-block=gigaQuotedTextBlock] .links-color a:hover {
+      color: #3f3f3f;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+
+    [data-ko-block=gigaTitleBlock] .links-color a,
+    [data-ko-block=gigaTitleBlock] .links-color a:link,
+    [data-ko-block=gigaTitleBlock] .links-color a:visited,
+    [data-ko-block=gigaTitleBlock] .links-color a:hover {
       color: #3f3f3f;
       -ko-color: @longTextStyle.linksColor;
       text-decoration: underline;
@@ -613,7 +638,26 @@
 
     <def attr="editable" selector="td" data-ko-editable="{{editable}}"></def>
     <def attr="content" selector="td" style="-ko-bind-text: @{{content}}"></def>
-    <tmpl><tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal">{{replacedcontent}}</td></tr></tmpl>
+    <tmpl><tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal;">{{replacedcontent}}</td></tr></tmpl>
+  </template>
+
+  <template tag="long-text-quoted">
+    <def attr="if" selector="tr" data-ko-display="{{if}}"></def>
+    <def attr="false" selector="tr" style="display: none"></def>
+
+    <def attr="color" selector="td" style="color: {{color}}"></def>
+    <def attr="size" selector="td" style="font-size: {{size}}"></def>
+    <def attr="face" selector="td" style="font-family: {{face}}"></def>
+
+    <def attr="align" selector="td" align="{{align}}" style="text-align: {{align}}"></def>
+    <def attr="line-height" selector="td" style="line-height: {{line-height}}"></def>
+    <def attr="fixed-align" selector="td" align="{{fixed-align}}" style="text-align: {{fixed-align}}"></def>
+
+    <def attr="style" selector="td" style="-ko-font-size: @[{{style}}.size]px; -ko-color: @{{style}}.color; -ko-font-family: @{{style}}.face{{#align}}; -ko-text-align: @{{style}}.align; -ko-attr-align: @{{style}}.align{{/align}}{{#line-height}}; -ko-line-height: @[{{style}}.lineHeight]{{/line-height}}"></def>
+
+    <def attr="editable" selector="td" data-ko-editable="{{editable}}"></def>
+    <def attr="content" selector="td" style="-ko-bind-text: @{{content}}"></def>
+    <tmpl><tr><td class="long-text-quoted links-color" width="100%" valign="top" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%">{{replacedcontent}}</td></tr></tmpl>
   </template>
 
   <template tag="linked-img">
@@ -832,20 +876,22 @@
 
   <default selector="block[theme='frameTheme'] linked-text" color="#ffffff" decoration="underline" style="linkStyle"></default>
   <default selector="block[theme='frameTheme'] long-text"></default>
+  <default selector="block[theme='frameTheme'] long-text-quoted"></default>
   <default selector="block[theme='frameTheme'] text, block[theme='frameTheme'] long-text" color="#919191" style="longTextStyle"></default>
-
+  <default selector="block[theme='frameTheme'] text, block[theme='frameTheme'] long-text-quoted" color="#919191" style="longTextStyle"></default>
 
   <default selector="block[theme='contentTheme'] text" size="18px" style="titleTextStyle"></default>
   <default selector="block[theme='contentTheme'] long-text" line-height="normal" style="longTextStyle"></default>
+  <default selector="block[theme='contentTheme'] long-text-quoted" line-height="normal" style="longTextStyle"></default>
   <default selector="share-btn" inner-addhpadding="4px" icon-size="24" icon-alt="{{name}}"></default>
   <default selector="block[theme='contentTheme'] btn" inner-hpadding="18px" style="buttonStyle"></default>
   <default selector="block[theme='contentTheme'] btn, share-btn" inner-padding="6" bgcolor="#bfbfbf" radius="4"></default>
   <default selector="block[theme='contentTheme'] linked-img" style="longTextStyle"></default>
 
   <default selector="divider" color="#3f3f3f"></default>
-  <default selector="text, title-text, long-text, share-btn, btn, linked-text, linked-img" face="Arial, Helvetica, sans-serif" color="#3f3f3f" size="13px"></default>
+  <default selector="text, title-text, long-text, long-text-quoted, share-btn, btn, linked-text, linked-img" face="Arial, Helvetica, sans-serif" color="#3f3f3f" size="13px"></default>
   <default selector="text, title-text, long-text:not([fixed-align]), btn, linked-text" align="left"></default>
-
+  <default selector="text, title-text, long-text-quoted:not([fixed-align]), btn, linked-text" align="left"></default>
   <!-- immages on gallery blocks are shown full width (100%) on mobile -->
   <default selector="*[if='gutterVisible eq false'] linked-img" class="mobile-full"></default>
 
@@ -955,10 +1001,25 @@
       </block-inner>
     </block>
 
+    <block name="gigaTitleBlock" label="GIGA Title Block">
+      <block-inner inner-padding="0" inner-class="vb-row">
+        <content spacing="9" td-styles="padding: 0 9px">
+          <long-text editable="text">Giga Section Title</long-text>
+        </content>
+      </block-inner>
+    </block>
+
     <block name="textBlock" label="Text Block">
       <block-inner inner-padding="18" inner-class="vb-container">
         <long-text editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href="">Vokalia and Consonantia</a>, there live the blind texts.</p>
           <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></long-text>
+      </block-inner>
+    </block>
+
+    <block name="gigaQuotedTextBlock" label="Giga Quoted Text Block">
+      <block-inner inner-padding="18" inner-class="vb-container">
+        <long-text-quoted editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href="">Vokalia and Consonantia</a>, there live the blind texts.</p>
+          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></long-text-quoted>
       </block-inner>
     </block>
 
