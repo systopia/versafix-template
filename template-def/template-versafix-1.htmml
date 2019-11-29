@@ -1013,7 +1013,7 @@
 
     <block name="gigaTitleBlock" label="GIGA Title Block">
       <block-inner inner-padding="0" inner-class="vb-row">
-        <content spacing="9" td-styles="padding: 0 9px">
+        <content spacing="0" td-styles="padding: 0 9px">
           <long-text editable="text">Giga Section Title</long-text>
         </content>
       </block-inner>
@@ -1084,7 +1084,7 @@
         <linked-img editable="image" width="570" placeholder-height="200"
           src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=570%2C200"></linked-img>
       </block-inner>
-      <block-inner false if="gutterVisible" inner-padding="18" inner-class="vb-container">
+      <block-inner false if="gutterVisible" inner-padding="0" inner-class="vb-container">
         <linked-img editable="image" width="534" placeholder-height="280"
           src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=534%2C280"></linked-img>
       </block-inner>
