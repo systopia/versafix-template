@@ -657,7 +657,8 @@
 
     <def attr="editable" selector="td" data-ko-editable="{{editable}}"></def>
     <def attr="content" selector="td" style="-ko-bind-text: @{{content}}"></def>
-    <tmpl><tr><td class="long-text-quoted links-color" width="100%" valign="top" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%">{{replacedcontent}}</td></tr></tmpl>
+    <tmpl><tr><td class="long-text-quoted links-color" width="100%" valign="center" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%; p:first-child{margin-top: 0;}
+    p:last-child{margin-bottom: 0;}">{{replacedcontent}}</td></tr></tmpl>
   </template>
 
   <template tag="linked-img">
@@ -1003,7 +1004,7 @@
 
     <block name="gigaTitleBlock" label="GIGA Title Block">
       <block-inner inner-padding="0" inner-class="vb-row">
-        <content spacing="0" td-styles="padding: 0 9px">
+        <content spacing="9" td-styles="padding: 0 9px">
           <long-text editable="text">Giga Section Title</long-text>
         </content>
       </block-inner>
@@ -1017,7 +1018,7 @@
     </block>
 
     <block name="gigaQuotedTextBlock" label="Giga Quoted Text Block">
-      <block-inner inner-padding="18" inner-class="vb-container">
+      <block-inner inner-padding="0" inner-class="vb-container">
         <long-text-quoted editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href="">Vokalia and Consonantia</a>, there live the blind texts.</p>
           <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></long-text-quoted>
       </block-inner>
@@ -1221,11 +1222,7 @@
         <divider width="100" height="1" style="hrStyle"></divider>
         <columns><!--
           --><column-content width="276" spacing="9">
-            <long-text fixed-align="left" editable="leftLongText"><p>GIGA German Institute of Global and Area Studies</br>Leibniz-Institut für Globale und Regionale Studien</p><p>Neuer Jungfernsteg 21 </br> 20354 Hamburg</p></long-text>
-            <long-text fixed-align="left" editable="rightLongText">
-              <p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a></p>
-              <p><a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p>
-            </long-text>
+            <long-text fixed-align="left" editable="leftLongText"><p>GIGA German Institute of Global and Area Studies</br>Leibniz-Institut für Globale und Regionale Studien</p><p>Neuer Jungfernsteg 21 </br> 20354 Hamburg</p><p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a></p></long-text>
           </column-content><!--
           --><column-content width="276" spacing="9">
             <custom-row if="socialIconType eq 'colors'" align="left" class="links-color socialLinks mobile-textcenter">
@@ -1240,6 +1237,9 @@
             </custom-row>
             <linked-img editable="logoImage" align="left" width="140" height="41" height-prop="imageHeight"
               src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=166%2C160"></linked-img>
+              <long-text fixed-align="left" editable="rightLongText">
+                <p><a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p>
+              </long-text>
           </column-content><!--
         --></columns>
         <divider width="100" height="1" style="hrStyle"></divider>
