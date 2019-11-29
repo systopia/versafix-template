@@ -314,6 +314,16 @@
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
       gigaTitleBlock:preview { -ko-background-color: @[backgroundColor] }
     }
+    /* Customizations Giga*/
+    p:first-child{margin-top: 0;}
+    p:last-child{margin-bottom: 0;}
+    h1 {margin-top: 0;}
+    h2 {margin-top: 0;}
+    h3 {margin-top: 0;}
+    h4 {margin-top: 0;}
+    h5 {margin-top: 0;}
+    h6 {margin-top: 0;}
+
   </style>
   <style type="text/css" data-inline="true">
     body { margin: 0; padding: 0; }
@@ -657,8 +667,7 @@
 
     <def attr="editable" selector="td" data-ko-editable="{{editable}}"></def>
     <def attr="content" selector="td" style="-ko-bind-text: @{{content}}"></def>
-    <tmpl><tr><td class="long-text-quoted links-color" width="100%" valign="center" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%; p:first-child{margin-top: 0;}
-    p:last-child{margin-bottom: 0;}">{{replacedcontent}}</td></tr></tmpl>
+    <tmpl><tr><td class="long-text-quoted links-color" width="100%" valign="center" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%">{{replacedcontent}}</td></tr></tmpl>
   </template>
 
   <template tag="linked-img">
@@ -1018,7 +1027,7 @@
     </block>
 
     <block name="gigaQuotedTextBlock" label="Giga Quoted Text Block">
-      <block-inner inner-padding="0" inner-class="vb-container">
+      <block-inner inner-padding="9" inner-class="vb-container">
         <long-text-quoted editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href="">Vokalia and Consonantia</a>, there live the blind texts.</p>
           <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></long-text-quoted>
       </block-inner>
