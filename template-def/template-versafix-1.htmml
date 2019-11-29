@@ -425,7 +425,7 @@
     [data-ko-block=gigaTitleBlock] .links-color a:hover {
       color: #3f3f3f;
       -ko-color: @longTextStyle.linksColor;
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     [data-ko-block=sideArticleBlock] .links-color a,
