@@ -262,7 +262,7 @@
       sideArticleBlock { label: Image+Text Block; properties: backgroundColor titleVisible=true buttonVisible=true imageWidth=166 imagePos=left titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; variant:imagePos; theme: contentTheme }
 
       textBlock { label: Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
-      gigaQuotedTextBlock { label: Giga Quoted Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
+      gigaQuotedTextBlock { label: Giga Quoted Text Block; properties: titleVisible=true backgroundColor titleTextStyle longTextStyle longText text; theme: contentTheme}
 
       singleArticleBlock imageWidth { label: Image Size; widget: select; options: 166=Small|258=Medium|350=Big|534=Full }
       singleArticleBlock { label: Image/Text Block; properties: titleVisible=true buttonVisible=true imageVisible=true imageWidth=534 titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; theme: contentTheme}
@@ -622,6 +622,25 @@
     </tr></tmpl>
   </template>
 
+  <template tag="quoted-text">
+    <def attr="if" selector="tr" data-ko-display="{{if}}"></def>
+    <def attr="false" selector="tr" style="display: none"></def>
+
+    <def attr="color" selector="td" style="color: {{color}}"></def>
+    <def attr="size" selector="td" style="font-size: {{size}}"></def>
+    <def attr="face" selector="td" style="font-family: {{face}}"></def>
+    <def attr="editable" selector="span" data-ko-editable="{{editable}}"></def>
+    <def attr="content" selector="span" style="-ko-bind-text: @{{content}}"></def>
+
+    <def attr="align" selector="td" align="{{align}}" style="text-align: {{align}}"></def>
+
+    <def attr="style" selector="td" style="-ko-font-size: @[{{style}}.size]px; -ko-color: @{{style}}.color; -ko-font-family: @{{style}}.face; -ko-text-align: @{{style}}.align; -ko-attr-align: @{{style}}.align"></def>
+
+    <tmpl><tr>
+      <td width="100%" valign="top" style="font-weight: normal"><span style="font-weight: normal">{{replacedcontent}}</span></td>
+    </tr></tmpl>
+  </template>
+
   <template tag="long-text">
     <def attr="if" selector="tr" data-ko-display="{{if}}"></def>
     <def attr="false" selector="tr" style="display: none"></def>
@@ -657,8 +676,7 @@
 
     <def attr="editable" selector="td" data-ko-editable="{{editable}}"></def>
     <def attr="content" selector="td" style="-ko-bind-text: @{{content}}"></def>
-    <tmpl><tr><td class="long-text-quoted links-color" width="100%" valign="center" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%; p:first-child{margin-top: 0;}
-    p:last-child{margin-bottom: 0;}">{{replacedcontent}}</td></tr></tmpl>
+    <tmpl><tr><td class="long-text-quoted links-color" width="100%" valign="center" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%">{{replacedcontent}}</td></tr></tmpl>
   </template>
 
   <template tag="linked-img">
@@ -878,10 +896,12 @@
   <default selector="block[theme='frameTheme'] linked-text" color="#ffffff" decoration="underline" style="linkStyle"></default>
   <default selector="block[theme='frameTheme'] long-text"></default>
   <default selector="block[theme='frameTheme'] long-text-quoted"></default>
-  <default selector="block[theme='frameTheme'] text, block[theme='frameTheme'] long-text" color="#919191" style="longTextStyle"></default>
-  <default selector="block[theme='frameTheme'] text, block[theme='frameTheme'] long-text-quoted" color="#919191" style="longTextStyle"></default>
+  <default selector="block[theme='frameTheme'] quoted-text"></default>
+  <default selector="block[theme='frameTheme'] text, quoted-text, block[theme='frameTheme'] long-text" color="#919191" style="longTextStyle"></default>
+  <default selector="block[theme='frameTheme'] text, quoted-text, block[theme='frameTheme'] long-text-quoted" color="#919191" style="longTextStyle"></default>
 
   <default selector="block[theme='contentTheme'] text" size="18px" style="titleTextStyle"></default>
+  <default selector="block[theme='contentTheme'] quoted-text" size="18px" style="titleTextStyle"></default>
   <default selector="block[theme='contentTheme'] long-text" line-height="normal" style="longTextStyle"></default>
   <default selector="block[theme='contentTheme'] long-text-quoted" line-height="normal" style="longTextStyle"></default>
   <default selector="share-btn" inner-addhpadding="4px" icon-size="24" icon-alt="{{name}}"></default>
@@ -890,9 +910,9 @@
   <default selector="block[theme='contentTheme'] linked-img" style="longTextStyle"></default>
 
   <default selector="divider" color="#3f3f3f"></default>
-  <default selector="text, title-text, long-text, long-text-quoted, share-btn, btn, linked-text, linked-img" face="Arial, Helvetica, sans-serif" color="#3f3f3f" size="13px"></default>
-  <default selector="text, title-text, long-text:not([fixed-align]), btn, linked-text" align="left"></default>
-  <default selector="text, title-text, long-text-quoted:not([fixed-align]), btn, linked-text" align="left"></default>
+  <default selector="text, quoted-text, title-text, long-text, long-text-quoted, share-btn, btn, linked-text, linked-img" face="Arial, Helvetica, sans-serif" color="#3f3f3f" size="13px"></default>
+  <default selector="text, quoted-text, title-text, long-text:not([fixed-align]), btn, linked-text" align="left"></default>
+  <default selector="text, quoted-text, title-text, long-text-quoted:not([fixed-align]), btn, linked-text" align="left"></default>
   <!-- immages on gallery blocks are shown full width (100%) on mobile -->
   <default selector="*[if='gutterVisible eq false'] linked-img" class="mobile-full"></default>
 
@@ -1019,8 +1039,11 @@
 
     <block name="gigaQuotedTextBlock" label="Giga Quoted Text Block">
       <block-inner inner-padding="0" inner-class="vb-container">
-        <long-text-quoted editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href="">Vokalia and Consonantia</a>, there live the blind texts.</p>
-          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></long-text-quoted>
+        <content spacing="9" width="552">
+          <quoted-text editable="quoted-text" if="titleVisible">Section Title</quoted-text>
+          <long-text-quoted editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href="">Vokalia and Consonantia</a>, there live the blind texts.</p>
+            <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></long-text-quoted>
+        </content>
       </block-inner>
     </block>
 

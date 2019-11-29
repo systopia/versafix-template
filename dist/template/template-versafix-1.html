@@ -262,7 +262,7 @@
       sideArticleBlock { label: Image+Text Block; properties: backgroundColor titleVisible=true buttonVisible=true imageWidth=166 imagePos=left titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; variant:imagePos; theme: contentTheme }
 
       textBlock { label: Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
-      gigaQuotedTextBlock { label: Giga Quoted Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
+      gigaQuotedTextBlock { label: Giga Quoted Text Block; properties: titleVisible=true backgroundColor titleTextStyle longTextStyle longText text; theme: contentTheme}
 
       singleArticleBlock imageWidth { label: Image Size; widget: select; options: 166=Small|258=Medium|350=Big|534=Full }
       singleArticleBlock { label: Image/Text Block; properties: titleVisible=true buttonVisible=true imageVisible=true imageWidth=534 titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; theme: contentTheme}
@@ -683,7 +683,7 @@
         
         <tr>
       <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align:top; width:100%; max-width: 552px; -mru-width: 0px"><!--
-        --><table role="presentation" class="vb-content" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 0px; border-spacing: 0px" width="552">
+        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
           
           <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="text">Giga Section Title</td></tr>
         
@@ -719,10 +719,20 @@
     <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="gigaQuotedTextBlock">
       <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
       <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="18" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 18px; border-spacing: 18px; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-container">
+      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-container">
         
-        <tr><td class="long-text-quoted links-color" width="100%" valign="top" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>
-          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></td></tr>
+        <tr>
+      <td align="center" valign="top" style="font-size: 0"><div style="vertical-align:top; width:100%; max-width: 552px; -mru-width: 0px"><!--
+        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px" width="552">
+          
+          <tr data-ko-display="titleVisible">
+      <td width="100%" valign="top" style="font-weight: normal; p:first-child{margin-top: 0;}; color: #919191; font-size: 18px; font-family: Arial, Helvetica, sans-serif; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align" align="left"><span style="font-weight: normal" data-ko-editable="text">Section Title</span></td>
+    </tr>
+          <tr><td class="long-text-quoted links-color" width="100%" valign="center" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>
+            <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></td></tr>
+        
+        </table></div></td>
+    </tr>
       
       </table></div><!--
     --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
@@ -1726,11 +1736,7 @@
       --><div style="display:inline-block; vertical-align:top; width: 100%; max-width: 276px; -mru-width: 0px; min-width: calc(276 * 100% / 552); -ko-min-width: @['calc(' + (276) * 100 / 552 + '%)']; max-width: calc(100%); -ko-max-width: @['calc(100%)']; width: calc(552 * 552px - 552 * 100%); -ko-width: @['calc('+ 552 * 552 + 'px - ' + 552 * 100 +'%)']" class="mobile-full"><!--
         --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; -yandex-p: calc(2px - 3%)" width="276" align="left">
           
-            <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face" align="left" data-ko-editable="leftLongText"><p>GIGA German Institute of Global and Area Studies<br>Leibniz-Institut für Globale und Regionale Studien</p><p>Neuer Jungfernsteg 21 <br> 20354 Hamburg</p></td></tr>
-            <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face" align="left" data-ko-editable="rightLongText">
-              <p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a></p>
-              <p><a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p>
-            </td></tr>
+            <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face" align="left" data-ko-editable="leftLongText"><p>GIGA German Institute of Global and Area Studies<br>Leibniz-Institut für Globale und Regionale Studien</p><p>Neuer Jungfernsteg 21 <br> 20354 Hamburg</p><p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a></p></td></tr>
           
         </table><!--
       --></div><!--[if (gte mso 9)|(lte ie 8)]></td><![endif]--><!--
@@ -1793,6 +1799,9 @@
               
             </td></tr>
             <tr style="text-align: left"><td width="100%" valign="top" align="left" class="links-color" style="text-align: left"><!--[if (lte ie 8)]><div style="display: inline-block; width: 140px; -mru-width: 0px"><![endif]--><a href data-ko-link="logoImage.url"><img alt border="0" hspace="0" align="left" vspace="0" style="vertical-align:top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; -ko-attr-alt: @[logoImage.alt == '' ? null : logoImage.alt]; width: 100%; max-width: 140px; height: auto; -ko-attr-height: @[imageHeight]" data-ko-editable="logoImage.src" width="140" height="41" src="https://mosaico.io/srv/f-default/img?method=placeholder&params=166%2C160"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+              <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face" align="left" data-ko-editable="rightLongText">
+                <p><a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p>
+              </td></tr>
           
         </table><!--
       --></div><!--[if (gte mso 9)|(lte ie 8)]></td><![endif]--><!--
