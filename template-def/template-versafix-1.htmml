@@ -1231,7 +1231,12 @@
         <divider width="100" height="1" style="hrStyle"></divider>
         <columns><!--
           --><column-content width="276" spacing="9">
-            <long-text fixed-align="left" editable="leftLongText"><p>GIGA German Institute of Global and Area Studies</br>Leibniz-Institut für Globale und Regionale Studien</p><p>Neuer Jungfernsteg 21 </br> 20354 Hamburg</p><p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a></p></long-text>
+            <long-text fixed-align="left" editable="leftLongText">
+              <p>GIGA German Institute of Global and Area Studies</br>Leibniz-Institut für Globale und Regionale Studien</p>
+              <p>Neuer Jungfernsteg 21 </br> 20354 Hamburg</p>
+              <p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a></p>
+              <p><a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p>
+            </long-text>
           </column-content><!--
           --><column-content width="276" spacing="9">
             <custom-row if="socialIconType eq 'colors'" align="left" class="links-color socialLinks mobile-textcenter">
@@ -1247,7 +1252,7 @@
             <linked-img editable="logoImage" align="left" width="140" height="41" height-prop="imageHeight"
               src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=166%2C160"></linked-img>
               <long-text fixed-align="left" editable="rightLongText">
-                <p><a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p>
+
               </long-text>
           </column-content><!--
         --></columns>
