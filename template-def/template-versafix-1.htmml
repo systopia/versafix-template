@@ -222,7 +222,7 @@
         label: Giga Footer Block;
         properties: socialIconType=colors fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=false inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=false instUrl youVisible=false youUrl longTextStyle leftLongText rightLongText backgroundColor logoImage;
         variant:socialIconType;
-        theme: frameTheme
+        theme: contentTheme
       }
 
       bigSocialBlock {
@@ -450,7 +450,7 @@
     [data-ko-block=footerBlock] .links-color a:link,
     [data-ko-block=footerBlock] .links-color a:visited,
     [data-ko-block=footerBlock] .links-color a:hover {
-      color: #cccccc;
+      color: #3f3f3f;
       -ko-color: @longTextStyle.linksColor;
       text-decoration: underline;
     }
@@ -1012,8 +1012,8 @@
     </block>
 
     <block name="gigaTitleBlock" label="GIGA Title Block">
-      <block-inner inner-padding="0" inner-class="vb-row">
-        <content spacing="0" td-styles="padding: 0 9px">
+      <block-inner inner-padding="0 9px" inner-class="vb-row">
+        <content spacing="0" td-styles="padding: 0px 9px">
           <long-text editable="text">Giga Section Title</long-text>
         </content>
       </block-inner>
@@ -1226,11 +1226,11 @@
       </block-inner>
     </block>
 
-    <block name="footerBlock" label="Giga Footer Block" theme="frameTheme">
+    <block name="footerBlock" label="Giga Footer Block"z>
       <block-inner inner-padding="9" inner-class="vb-row">
         <divider width="100" height="1" style="hrStyle"></divider>
         <columns><!--
-          --><column-content width="276" spacing="9">
+        --><column-content width="368" spacing="9">
             <long-text fixed-align="left" editable="leftLongText">
               <p>GIGA German Institute of Global and Area Studies</br>Leibniz-Institut für Globale und Regionale Studien</p>
               <p>Neuer Jungfernsteg 21 </br> 20354 Hamburg</p>
@@ -1238,8 +1238,8 @@
               <p><a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p>
             </long-text>
           </column-content><!--
-          --><column-content width="276" spacing="9">
-            <custom-row if="socialIconType eq 'colors'" align="left" class="links-color socialLinks mobile-textcenter">
+          --><column-content width="184" spacing="9">
+            <custom-row if="socialIconType eq 'colors'" align="lefts" class="links-color socialLinks mobile-textcenter">
               <repeater prefix="fb,tw,gg,web,wa,tg,in,pi,fl,vi,inst,you" default="if,if,if,false if,false if,false if,false if,false if,false if,false if,false if,false if" color="#3b5998,#4099FF,#d34836,#606060,#25d366,#2da5e1,#007bb6,#C92228,#ff0084,#45bbff,#bc2a8d,#cd201f" name="Facebook,Twitter,Google,Web,Whatsapp,Telegram,Linkedin,Pinterest,Flickr,Vimeo,Instagram,Youtube">
                 <social-icon {{default}}="{{prefix}}Visible" href-prop="{{prefix}}Url" color="{{color}}" src="img/icons/{{prefix}}-colors-96.png" alt="{{name}}"></social-icon>
               </repeater>

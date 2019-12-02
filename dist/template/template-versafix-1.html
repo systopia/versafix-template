@@ -222,7 +222,7 @@
         label: Giga Footer Block;
         properties: socialIconType=colors fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=false inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=false instUrl youVisible=false youUrl longTextStyle leftLongText rightLongText backgroundColor logoImage;
         variant:socialIconType;
-        theme: frameTheme
+        theme: contentTheme
       }
 
       bigSocialBlock {
@@ -450,7 +450,7 @@
     [data-ko-block=footerBlock] .links-color a:link,
     [data-ko-block=footerBlock] .links-color a:visited,
     [data-ko-block=footerBlock] .links-color a:hover {
-      color: #cccccc;
+      color: #3f3f3f;
       -ko-color: @longTextStyle.linksColor;
       text-decoration: underline;
     }
@@ -689,10 +689,10 @@
     <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="gigaTitleBlock">
       <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
       <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 0px; border-spacing: 0px; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-row">
+      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0 9px" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 0 9pxpx; border-spacing: 0 9pxpx; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-row">
         
         <tr>
-      <td align="center" valign="top" style="font-size: 0; padding: 0 9px"><div style="vertical-align:top; width:100%; max-width: 552px; -mru-width: 0px"><!--
+      <td align="center" valign="top" style="font-size: 0; padding: 0px 9px"><div style="vertical-align:top; width:100%; max-width: 552px; -mru-width: 0px"><!--
         --><table role="presentation" class="vb-content" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 0px; border-spacing: 0px" width="552">
           
           <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="text">Giga Section Title</td></tr>
@@ -1719,10 +1719,10 @@
 
     
     <!-- footerBlock -->
-    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#3f3f3f" style="background-color: #3f3f3f; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]" data-ko-block="footerBlock">
+    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="footerBlock">
       <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
       <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="9" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; max-width: 570px; -mru-width: 0px" width="570" class="vb-row">
+      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="9" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 9px; border-spacing: 9px; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-row">
         
         <tr>
       <td valign="top" align="center"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-spacing: 0; width: 100%; -ko-width: @[hrStyle.hrWidth]%; -ko-attr-width: @[hrStyle.hrWidth]%"><tr>
@@ -1732,11 +1732,11 @@
         <tr>
       <td align="center" valign="top" style="font-size: 0"><div style="width:100%; max-width: 552px; -mru-width: 0px"><!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="552"><tr><![endif]--><!--
         --><!--
-          --><!--[if (gte mso 9)|(lte ie 8)]><td align="left" valign="top" width="276"><![endif]--><!--
-      --><div style="display:inline-block; vertical-align:top; width: 100%; max-width: 276px; -mru-width: 0px; min-width: calc(276 * 100% / 552); -ko-min-width: @['calc(' + (276) * 100 / 552 + '%)']; max-width: calc(100%); -ko-max-width: @['calc(100%)']; width: calc(552 * 552px - 552 * 100%); -ko-width: @['calc('+ 552 * 552 + 'px - ' + 552 * 100 +'%)']" class="mobile-full"><!--
-        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; -yandex-p: calc(2px - 3%)" width="276" align="left">
+        --><!--[if (gte mso 9)|(lte ie 8)]><td align="left" valign="top" width="368"><![endif]--><!--
+      --><div style="display:inline-block; vertical-align:top; width: 100%; max-width: 368px; -mru-width: 0px; min-width: calc(368 * 100% / 552); -ko-min-width: @['calc(' + (368) * 100 / 552 + '%)']; max-width: calc(100%); -ko-max-width: @['calc(100%)']; width: calc(552 * 552px - 552 * 100%); -ko-width: @['calc('+ 552 * 552 + 'px - ' + 552 * 100 +'%)']" class="mobile-full"><!--
+        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; -yandex-p: calc(2px - 3%)" width="368" align="left">
           
-            <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face" align="left" data-ko-editable="leftLongText">
+            <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: normal; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="leftLongText">
               <p>GIGA German Institute of Global and Area Studies<br>Leibniz-Institut für Globale und Regionale Studien</p>
               <p>Neuer Jungfernsteg 21 <br> 20354 Hamburg</p>
               <p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a></p>
@@ -1745,11 +1745,11 @@
           
         </table><!--
       --></div><!--[if (gte mso 9)|(lte ie 8)]></td><![endif]--><!--
-          --><!--[if (gte mso 9)|(lte ie 8)]><td align="left" valign="top" width="276"><![endif]--><!--
-      --><div style="display:inline-block; vertical-align:top; width: 100%; max-width: 276px; -mru-width: 0px; min-width: calc(276 * 100% / 552); -ko-min-width: @['calc(' + (276) * 100 / 552 + '%)']; max-width: calc(100%); -ko-max-width: @['calc(100%)']; width: calc(552 * 552px - 552 * 100%); -ko-width: @['calc('+ 552 * 552 + 'px - ' + 552 * 100 +'%)']" class="mobile-full"><!--
-        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; -yandex-p: calc(2px - 3%)" width="276" align="left">
+          --><!--[if (gte mso 9)|(lte ie 8)]><td align="left" valign="top" width="184"><![endif]--><!--
+      --><div style="display:inline-block; vertical-align:top; width: 100%; max-width: 184px; -mru-width: 0px; min-width: calc(184 * 100% / 552); -ko-min-width: @['calc(' + (184) * 100 / 552 + '%)']; max-width: calc(100%); -ko-max-width: @['calc(100%)']; width: calc(552 * 552px - 552 * 100%); -ko-width: @['calc('+ 552 * 552 + 'px - ' + 552 * 100 +'%)']" class="mobile-full"><!--
+        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; -yandex-p: calc(2px - 3%)" width="184" align="left">
           
-            <tr data-ko-display="socialIconType eq 'colors'"><td width="100%" valign="top" style="font-weight: normal; text-align: left" align="left" class="links-color socialLinks mobile-textcenter">
+            <tr data-ko-display="socialIconType eq 'colors'"><td width="100%" valign="top" style="font-weight: normal; text-align: lefts" align="lefts" class="links-color socialLinks mobile-textcenter">
               
                 <span data-ko-wrap="false" data-ko-display="fbVisible">&nbsp;</span><a href data-ko-display="fbVisible" style="background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #3b5998; border-radius: 50px; -ko-attr-href: @[fbUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/fb-colors-96.png" width="32" height="32" alt="Facebook"></a>
               
@@ -1803,8 +1803,8 @@
                 <span data-ko-wrap="false" data-ko-display="youVisible" style="display: none">&nbsp;</span><a href data-ko-display="youVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[youUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/you-bw-96.png" width="32" height="32" alt="Youtube"></a>
               
             </td></tr>
-            <tr style="text-align: left"><td width="100%" valign="top" align="left" class="links-color" style="text-align: left"><!--[if (lte ie 8)]><div style="display: inline-block; width: 140px; -mru-width: 0px"><![endif]--><a href data-ko-link="logoImage.url"><img alt border="0" hspace="0" align="left" vspace="0" style="vertical-align:top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; -ko-attr-alt: @[logoImage.alt == '' ? null : logoImage.alt]; width: 100%; max-width: 140px; height: auto; -ko-attr-height: @[imageHeight]" data-ko-editable="logoImage.src" width="140" height="41" src="https://mosaico.io/srv/f-default/img?method=placeholder&params=166%2C160"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
-              <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #919191; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face" align="left" data-ko-editable="rightLongText">
+            <tr style="text-align: left"><td width="100%" valign="top" align="left" class="links-color" style="text-align: left"><!--[if (lte ie 8)]><div style="display: inline-block; width: 140px; -mru-width: 0px"><![endif]--><a href data-ko-link="logoImage.url"><img alt border="0" hspace="0" align="left" vspace="0" style="vertical-align:top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-attr-alt: @[logoImage.alt == '' ? null : logoImage.alt]; width: 100%; max-width: 140px; height: auto; -ko-attr-height: @[imageHeight]" data-ko-editable="logoImage.src" width="140" height="41" src="https://mosaico.io/srv/f-default/img?method=placeholder&params=166%2C160"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+              <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: normal; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="rightLongText">
 
               </td></tr>
           
