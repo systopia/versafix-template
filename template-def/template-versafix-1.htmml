@@ -1013,7 +1013,7 @@
 
     <block name="gigaTitleBlock" label="GIGA Title Block">
       <block-inner inner-padding="0 9px" inner-class="vb-row">
-        <content spacing="0" td-styles="padding: 0px 9px">
+        <content spacing="0" td-styles="padding: 0px 18px;">
           <long-text editable="text">Giga Section Title</long-text>
         </content>
       </block-inner>
