@@ -1226,9 +1226,9 @@
       </block-inner>
     </block>
 
-    <block name="footerBlock" label="Giga Footer Block"z>
+    <block name="footerBlock" height="4" height-prop="spacerSize" label="Giga Footer Block"z>
       <block-inner inner-padding="9" inner-class="vb-row">
-        <divider width="100" height="1" style="hrStyle"></divider>
+        <spacer height="4" height-prop="spacerSize"></spacer>
         <columns><!--
         --><column-content width="368" spacing="9">
             <long-text fixed-align="left" editable="leftLongText">
@@ -1252,11 +1252,10 @@
             <linked-img editable="logoImage" align="left" width="140" height="41" height-prop="imageHeight"
               src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=166%2C160"></linked-img>
               <long-text fixed-align="left" editable="rightLongText">
-
               </long-text>
           </column-content><!--
         --></columns>
-        <divider width="100" height="1" style="hrStyle"></divider>
+        <spacer height="4" height-prop="spacerSize"></spacer>
       </block-inner>
     </block>
 
