@@ -444,6 +444,8 @@
       /* imageSeparatorBlock { label: Image Separator Block;  theme: contentTheme} */
       spacerBlock { label: Spacer Block; properties: externalBackgroundVisible=true; theme: contentTheme}
 
+      pvSignatureBlock { label: Signature Block; properties: backgroundColor titleVisible=true buttonVisible=true imageVisible=true fixedImageHeightVisible=true titleTextStyle longTextStyle buttonStyle  leftImage  leftLongText leftButtonLink rightImage  rightLongText rightButtonLink; theme: contentTheme}
+
       spacerBlock:preview,
       logoBlock:preview { -ko-background-color: @[externalBackgroundColor] }
 
@@ -458,6 +460,7 @@
       footerBlock:preview,
       socialBlock:preview,
       footerProVegBlock:preview,
+      pvSignatureBlock:preview,
       buttonBlock:preview,
       twoButtonBlock:preview,
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
@@ -571,6 +574,15 @@
     [data-ko-block=footerProVegBlock] .links-color a:visited,
     [data-ko-block=footerProVegBlock] .links-color a:hover {
       color: #cccccc;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+
+    [data-ko-block=pvSignatureBlock] .links-color a,
+    [data-ko-block=pvSignatureBlock] .links-color a:link,
+    [data-ko-block=pvSignatureBlock] .links-color a:visited,
+    [data-ko-block=pvSignatureBlock] .links-color a:hover {
+      color: #3f3f3f;
       -ko-color: @longTextStyle.linksColor;
       text-decoration: underline;
     }
@@ -1895,6 +1907,46 @@
     </td></tr>
     </table>
     <!-- /footerProVegBlock -->
+    
+
+    
+    <!-- pvSignatureBlock -->
+    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="pvSignatureBlock">
+      <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
+      <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
+      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="9" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 9px; border-spacing: 9px; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-row">
+        
+        <tr>
+      <td align="center" valign="top" style="font-size: 0"><div style="width:100%; max-width: 552px; -mru-width: 0px"><!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="552"><tr><![endif]--><!--
+        --><!--
+      --><!--[if (gte mso 9)|(lte ie 8)]><td align="left" valign="top" width="184"><![endif]--><!--
+      --><div style="display:inline-block; vertical-align:top; width: 100%; max-width: 184px; -mru-width: 0px; min-width: calc(184 * 100% / 552); -ko-min-width: @['calc(' + (184) * 100 / 552 + '%)']; max-width: calc(100%); -ko-max-width: @['calc(100%)']; width: calc(552 * 552px - 552 * 100%); -ko-width: @['calc('+ 552 * 552 + 'px - ' + 552 * 100 +'%)']" class="mobile-full"><!--
+        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; -yandex-p: calc(2px - 3%)" width="184" align="left">
+          
+            <tr data-ko-display="imageVisible and fixedImageHeightVisible"><td width="100%" valign="top" align="center" class="links-color" style="padding-bottom: 9px"><!--[if (lte ie 8)]><div style="display: inline-block; width: 166px; -mru-width: 0px"><![endif]--><a href data-ko-link="leftImage.url"><img alt border="0" hspace="0" align="center" vspace="0" style="vertical-align:top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-attr-alt: @[leftImage.alt == '' ? null : leftImage.alt]; width: 100%; max-width: 166px; height: auto; -ko-attr-height: @[imageHeight]" data-ko-editable="leftImage.src" width="166" height="100" src="https://mosaico.io/srv/f-default/img?method=placeholder&params=166%2C90"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+            <tr data-ko-display="imageVisible and fixedImageHeightVisible eq false" style="display: none"><td width="100%" valign="top" align="center" class="links-color" style="padding-bottom: 9px"><!--[if (lte ie 8)]><div style="display: inline-block; width: 166px; -mru-width: 0px"><![endif]--><a href data-ko-link="leftImage.url"><img alt border="0" hspace="0" align="center" vspace="0" style="vertical-align:top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-attr-alt: @[leftImage.alt == '' ? null : leftImage.alt]; width: 100%; max-width: 166px; height: auto" data-ko-editable="leftImage.src" width="166" data-ko-placeholder-height="100" src="https://mosaico.io/srv/f-default/img?method=placeholder&params=166%2C100"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+          
+        </table><!--
+      --></div><!--[if (gte mso 9)|(lte ie 8)]></td><![endif]--><!--
+        --><!--[if (gte mso 9)|(lte ie 8)]><td align="left" valign="top" width="368"><![endif]--><!--
+      --><div style="display:inline-block; vertical-align:top; width: 100%; max-width: 368px; -mru-width: 0px; min-width: calc(368 * 100% / 552); -ko-min-width: @['calc(' + (368) * 100 / 552 + '%)']; max-width: calc(100%); -ko-max-width: @['calc(100%)']; width: calc(552 * 552px - 552 * 100%); -ko-width: @['calc('+ 552 * 552 + 'px - ' + 552 * 100 +'%)']" class="mobile-full"><!--
+        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; -yandex-p: calc(2px - 3%)" width="368" align="left">
+          
+              <tr data-ko-display="imageVisible and fixedImageHeightVisible"><td width="100%" valign="top" align="center" class="links-color" style="padding-bottom: 9px"><!--[if (lte ie 8)]><div style="display: inline-block; width: 350px; -mru-width: 0px"><![endif]--><a href data-ko-link="rightImage.url"><img alt border="0" hspace="0" align="center" vspace="0" style="vertical-align:top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-attr-alt: @[rightImage.alt == '' ? null : rightImage.alt]; width: 100%; max-width: 350px; height: auto; -ko-attr-height: @[imageHeight]" data-ko-editable="rightImage.src" width="350" height="100" src="https://mosaico.io/srv/f-default/img?method=placeholder&params=166%2C90"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+              <tr data-ko-display="imageVisible and fixedImageHeightVisible eq false" style="display: none"><td width="100%" valign="top" align="center" class="links-color" style="padding-bottom: 9px"><!--[if (lte ie 8)]><div style="display: inline-block; width: 350px; -mru-width: 0px"><![endif]--><a href data-ko-link="rightImage.url"><img alt border="0" hspace="0" align="center" vspace="0" style="vertical-align:top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-attr-alt: @[rightImage.alt == '' ? null : rightImage.alt]; width: 100%; max-width: 350px; height: auto" data-ko-editable="rightImage.src" width="350" data-ko-placeholder-height="50" src="https://mosaico.io/srv/f-default/img?method=placeholder&params=166%2C100"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
+              <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="rightLongText"><p>A long time ago in a galaxy far, far away....</p></td></tr>
+            
+        </table><!--
+      --></div><!--[if (gte mso 9)|(lte ie 8)]></td><![endif]--><!--
+          --><!--
+      --><!--[if (gte mso 9)|(lte ie 8)]></tr></table><![endif]--></div></td>
+    </tr>
+      
+      </table></div><!--
+    --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+    </td></tr>
+    </table>
+    <!-- /pvSignatureBlock -->
     
 
   </div>
