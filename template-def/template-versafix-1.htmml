@@ -1415,10 +1415,10 @@
             <linked-img false if="imageVisible and fixedImageHeightVisible eq false" editable="leftImage" width="166" placeholder-height="100" padding-bottom="9"
               src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=166%2C100"></linked-img>
           </column-content-pv><!--
-        --><column-content-pv spacing="9" width="200" >
-              <linked-img if="imageVisible and fixedImageHeightVisible" editable="rightImage" width="200" height="100" height-prop="imageHeight" padding-bottom="9"
+        --><column-content-pv spacing="9" width="250" >
+              <linked-img if="imageVisible and fixedImageHeightVisible" editable="rightImage" width="250" height="100" height-prop="imageHeight" padding-bottom="9"
                 src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=166%2C90"></linked-img>
-              <linked-img false if="imageVisible and fixedImageHeightVisible eq false" editable="rightImage" width="200" placeholder-height="50" padding-bottom="9"
+              <linked-img false if="imageVisible and fixedImageHeightVisible eq false" editable="rightImage" width="250" placeholder-height="50" padding-bottom="9"
                 src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=166%2C100"></linked-img>
               <long-text editable="rightLongText"><p>A long time ago in a galaxy far, far away....</p></long-text>
             </column-content-pv><!--
