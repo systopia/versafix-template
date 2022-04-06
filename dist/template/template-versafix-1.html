@@ -76,7 +76,7 @@
       bigButtonStyle { label: Big Button; extend: buttonStyle }
       titleTextStyle { label: Title; extend: textStyle }
 
-      gigaTitleTextStyle { label: Title; extend: longTextStyle }
+      customTitleTextStyle { label: Title; extend: longTextStyle }
       /* background */
       externalBackgroundColor { label: External Background; extend: color }
 
@@ -187,7 +187,6 @@
       sideArticleBlock { label: Image+Text Block; properties: backgroundColor titleVisible=true buttonVisible=true imageWidth=166 imagePos=left titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; variant:imagePos; theme: contentTheme }
 
       textBlock { label: Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
-      gigaQuotedTextBlock { label: Giga Quoted Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
 
       singleArticleBlock imageWidth { label: Image Size; widget: select; options: 166=Small|258=Medium|350=Big|534=Full }
       singleArticleBlock { label: Image/Text Block; properties: titleVisible=true buttonVisible=true imageVisible=true imageWidth=534 titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; theme: contentTheme}
@@ -204,7 +203,7 @@
       logoBlock { label: Logo Block; properties: externalBackgroundVisible=true image imageWidth=258; variant: externalBackgroundVisible; theme: contentTheme}
 
       titleBlock { label: Title; theme: contentTheme}
-      gigaTitleBlock { label: Giga Title; theme: contentTheme}
+      customTitleBlock { label: Custom Title; theme: contentTheme}
 
       imageBlock longTextStyle { label: Alternative Text; }
       imageBlock { label: Image; properties: gutterVisible=false; variant: gutterVisible; theme: contentTheme }
@@ -227,18 +226,17 @@
       hrBlock:preview,
       sideArticleBlock:preview,
       textBlock:preview,
-      gigaQuotedTextBlock:preview,
       singleArticleBlock:preview,
       doubleArticleBlock:preview,
       tripleArticleBlock:preview,
       titleBlock:preview,
-      gigaTitleBlock:preview,
+      customTitleBlock:preview,
       socialBlock:preview,
       buttonBlock:preview,
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
-      gigaTitleBlock:preview { -ko-background-color: @[backgroundColor] }
+      customTitleBlock:preview { -ko-background-color: @[backgroundColor] }
     }
-    /* Customizations Giga*/
+    /* Customizations for title Block*/
     p:first-child{margin-top: 0;}
     p:last-child{margin-bottom: 0;}
     h1 {margin-top: 0;}
@@ -334,19 +332,10 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=gigaQuotedTextBlock] .links-color a,
-    [data-ko-block=gigaQuotedTextBlock] .links-color a:link,
-    [data-ko-block=gigaQuotedTextBlock] .links-color a:visited,
-    [data-ko-block=gigaQuotedTextBlock] .links-color a:hover {
-      color: #3f3f3f;
-      -ko-color: @longTextStyle.linksColor;
-      text-decoration: underline;
-    }
-
-    [data-ko-block=gigaTitleBlock] .links-color a,
-    [data-ko-block=gigaTitleBlock] .links-color a:link,
-    [data-ko-block=gigaTitleBlock] .links-color a:visited,
-    [data-ko-block=gigaTitleBlock] .links-color a:hover {
+    [data-ko-block=customTitleBlock] .links-color a,
+    [data-ko-block=customTitleBlock] .links-color a:link,
+    [data-ko-block=customTitleBlock] .links-color a:visited,
+    [data-ko-block=customTitleBlock] .links-color a:hover {
       color: #3f3f3f;
       -ko-color: @longTextStyle.linksColor;
       text-decoration: none;
@@ -601,8 +590,8 @@
     
 
     
-    <!-- gigaTitleBlock -->
-    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="gigaTitleBlock">
+    <!-- customTitleBlock -->
+    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="customTitleBlock">
       <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
       <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
       --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="0 9px" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 0 9pxpx; border-spacing: 0 9pxpx; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-row">
@@ -611,7 +600,7 @@
       <td align="center" valign="top" style="font-size: 0; padding: 0px 18px;"><div style="vertical-align:top; width:100%; max-width: 552px; -mru-width: 0px"><!--
         --><table role="presentation" class="vb-content" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 0px; border-spacing: 0px" width="552">
           
-          <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="text">Giga Section Title</td></tr>
+          <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="text">Custom Section Title</td></tr>
         
         </table></div></td>
     </tr>
@@ -620,7 +609,7 @@
     --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
     </td></tr>
     </table>
-    <!-- /gigaTitleBlock -->
+    <!-- /customTitleBlock -->
     
 
     
@@ -638,23 +627,6 @@
     </td></tr>
     </table>
     <!-- /textBlock -->
-    
-
-    
-    <!-- gigaQuotedTextBlock -->
-    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="gigaQuotedTextBlock">
-      <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0">
-      <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="9" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 9px; border-spacing: 9px; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-container">
-        
-        <tr><td class="long-text-quoted links-color" width="100%" valign="center" style="font-weight: normal; border-left: 4px solid #e1e2e3; padding-left: 2%; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: left; line-height: normal; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-text-align: @longTextStyle.align; -ko-attr-align: @longTextStyle.align; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href>Vokalia and Consonantia</a>, there live the blind texts.</p>
-          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></td></tr>
-      
-      </table></div><!--
-    --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-    </td></tr>
-    </table>
-    <!-- /gigaQuotedTextBlock -->
     
 
     

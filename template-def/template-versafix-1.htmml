@@ -76,7 +76,7 @@
       bigButtonStyle { label: Big Button; extend: buttonStyle }
       titleTextStyle { label: Title; extend: textStyle }
 
-      gigaTitleTextStyle { label: Title; extend: longTextStyle }
+      customTitleTextStyle { label: Title; extend: longTextStyle }
       /* background */
       externalBackgroundColor { label: External Background; extend: color }
 
@@ -187,7 +187,6 @@
       sideArticleBlock { label: Image+Text Block; properties: backgroundColor titleVisible=true buttonVisible=true imageWidth=166 imagePos=left titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; variant:imagePos; theme: contentTheme }
 
       textBlock { label: Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
-      gigaQuotedTextBlock { label: Giga Quoted Text Block; properties: backgroundColor longTextStyle longText; theme: contentTheme}
 
       singleArticleBlock imageWidth { label: Image Size; widget: select; options: 166=Small|258=Medium|350=Big|534=Full }
       singleArticleBlock { label: Image/Text Block; properties: titleVisible=true buttonVisible=true imageVisible=true imageWidth=534 titleTextStyle longTextStyle buttonStyle  image  longText buttonLink; theme: contentTheme}
@@ -204,7 +203,7 @@
       logoBlock { label: Logo Block; properties: externalBackgroundVisible=true image imageWidth=258; variant: externalBackgroundVisible; theme: contentTheme}
 
       titleBlock { label: Title; theme: contentTheme}
-      gigaTitleBlock { label: Giga Title; theme: contentTheme}
+      customTitleBlock { label: Custom Title; theme: contentTheme}
 
       imageBlock longTextStyle { label: Alternative Text; }
       imageBlock { label: Image; properties: gutterVisible=false; variant: gutterVisible; theme: contentTheme }
@@ -227,18 +226,17 @@
       hrBlock:preview,
       sideArticleBlock:preview,
       textBlock:preview,
-      gigaQuotedTextBlock:preview,
       singleArticleBlock:preview,
       doubleArticleBlock:preview,
       tripleArticleBlock:preview,
       titleBlock:preview,
-      gigaTitleBlock:preview,
+      customTitleBlock:preview,
       socialBlock:preview,
       buttonBlock:preview,
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
-      gigaTitleBlock:preview { -ko-background-color: @[backgroundColor] }
+      customTitleBlock:preview { -ko-background-color: @[backgroundColor] }
     }
-    /* Customizations Giga*/
+    /* Customizations for title Block*/
     p:first-child{margin-top: 0;}
     p:last-child{margin-bottom: 0;}
     h1 {margin-top: 0;}
@@ -334,19 +332,10 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=gigaQuotedTextBlock] .links-color a,
-    [data-ko-block=gigaQuotedTextBlock] .links-color a:link,
-    [data-ko-block=gigaQuotedTextBlock] .links-color a:visited,
-    [data-ko-block=gigaQuotedTextBlock] .links-color a:hover {
-      color: #3f3f3f;
-      -ko-color: @longTextStyle.linksColor;
-      text-decoration: underline;
-    }
-
-    [data-ko-block=gigaTitleBlock] .links-color a,
-    [data-ko-block=gigaTitleBlock] .links-color a:link,
-    [data-ko-block=gigaTitleBlock] .links-color a:visited,
-    [data-ko-block=gigaTitleBlock] .links-color a:hover {
+    [data-ko-block=customTitleBlock] .links-color a,
+    [data-ko-block=customTitleBlock] .links-color a:link,
+    [data-ko-block=customTitleBlock] .links-color a:visited,
+    [data-ko-block=customTitleBlock] .links-color a:hover {
       color: #3f3f3f;
       -ko-color: @longTextStyle.linksColor;
       text-decoration: none;
@@ -927,10 +916,10 @@
       </block-inner>
     </block>
 
-    <block name="gigaTitleBlock" label="GIGA Title Block">
+    <block name="customTitleBlock" label="Custom Title Block">
       <block-inner inner-padding="0 9px" inner-class="vb-row">
         <content spacing="0" td-styles="padding: 0px 18px;">
-          <long-text editable="text">Giga Section Title</long-text>
+          <long-text editable="text">Custom Section Title</long-text>
         </content>
       </block-inner>
     </block>
@@ -939,13 +928,6 @@
       <block-inner inner-padding="18" inner-class="vb-container">
         <long-text editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href="">Vokalia and Consonantia</a>, there live the blind texts.</p>
           <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></long-text>
-      </block-inner>
-    </block>
-
-    <block name="gigaQuotedTextBlock" label="Giga Quoted Text Block">
-      <block-inner inner-padding="9" inner-class="vb-container">
-        <long-text-quoted editable="longText"><p>Far far away, behind the word mountains, far from the countries <a href="">Vokalia and Consonantia</a>, there live the blind texts.</p>
-          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p></long-text-quoted>
       </block-inner>
     </block>
 
