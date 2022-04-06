@@ -7,74 +7,6 @@
   <title style="-ko-bind-text: @titleText">TITLE</title>
   <style type="text/css">
 
-  @font-face {
-      font-family: 'Helvetica Neue LT-Black';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-Light';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-Medium';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-Roman';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-Thin';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-BoldOutline';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-
-
     @supports -ko-blockdefs {
       id { widget: id }
       size { label: Size; widget: select; options: 8|9|10|11|12|13|14|15|16|18|20|22|24|25|28|31; }
@@ -86,7 +18,7 @@
         max: 20;
         help: Attention - this property is not supported on all email clients (i.e. Outlook)
       }
-      face { label: Font; widget: select; options: Arial, Helvetica, sans-serif=Arial|Arial Black, Arial Black, Gadget, sans-serif=Arial Black|Comic Sans MS, Comic Sans MS5, cursive=Comic Sans|Courier New, Courier New, monospace=Courier|Georgia, serif=Georgia|Impact, sans-serif=Impact|Lucida Console, Monaco, monospace=Lucida Console|Lucida Sans Unicode, Lucida Grande, sans-serif=Lucida Sans Unicode|Times New Roman, Times, serif=Times New Roman|Verdana, Geneva, sans-serif=Verdana|Helvetica Neue LT-Black|Helvetica Neue LT-BoldOutline|Helvetica Neue LT-BoldOutline|Helvetica Neue LT-Light|Helvetica Neue LT-Medium|Helvetica Neue LT-Roman|Helvetica Neue LT-Thin}
+      face { label: Font; widget: select; options: Arial, Helvetica, sans-serif=Arial|Arial Black, Arial Black, Gadget, sans-serif=Arial Black|Comic Sans MS, Comic Sans MS5, cursive=Comic Sans|Courier New, Courier New, monospace=Courier|Georgia, serif=Georgia|Impact, sans-serif=Impact|Lucida Console, Monaco, monospace=Lucida Console|Lucida Sans Unicode, Lucida Grande, sans-serif=Lucida Sans Unicode|Times New Roman, Times, serif=Times New Roman|Verdana, Geneva, sans-serif=Verdana}
       decoration { label: Decoration; widget: select; options: none=None|underline=Underline }
       linksColor { label: Link Color; extend: color }
       linksDecoration { label: Underlined Links?; extend: decoration }
