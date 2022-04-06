@@ -7,74 +7,6 @@
   <title style="-ko-bind-text: @titleText">TITLE</title>
   <style type="text/css">
 
-  @font-face {
-      font-family: 'Helvetica Neue LT-Black';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Black.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-Light';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Light.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-Medium';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Medium.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-Roman';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Roman.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-Thin';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-Thin.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Helvetica Neue LT-BoldOutline';
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.eot');
-      src: url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.eot?#iefix') format('embedded-opentype'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.woff2') format('woff2'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.woff') format('woff'),
-          url('https://proxy.giga-hamburg.de/fonts/HelveticaNeueLT-BoldOutline.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-
-
     @supports -ko-blockdefs {
       id { widget: id }
       size { label: Size; widget: select; options: 8|9|10|11|12|13|14|15|16|18|20|22|24|25|28|31; }
@@ -86,7 +18,7 @@
         max: 20;
         help: Attention - this property is not supported on all email clients (i.e. Outlook)
       }
-      face { label: Font; widget: select; options: Arial, Helvetica, sans-serif=Arial|Arial Black, Arial Black, Gadget, sans-serif=Arial Black|Comic Sans MS, Comic Sans MS5, cursive=Comic Sans|Courier New, Courier New, monospace=Courier|Georgia, serif=Georgia|Impact, sans-serif=Impact|Lucida Console, Monaco, monospace=Lucida Console|Lucida Sans Unicode, Lucida Grande, sans-serif=Lucida Sans Unicode|Times New Roman, Times, serif=Times New Roman|Verdana, Geneva, sans-serif=Verdana|Helvetica Neue LT-Black|Helvetica Neue LT-BoldOutline|Helvetica Neue LT-BoldOutline|Helvetica Neue LT-Light|Helvetica Neue LT-Medium|Helvetica Neue LT-Roman|Helvetica Neue LT-Thin}
+      face { label: Font; widget: select; options: Arial, Helvetica, sans-serif=Arial|Arial Black, Arial Black, Gadget, sans-serif=Arial Black|Comic Sans MS, Comic Sans MS5, cursive=Comic Sans|Courier New, Courier New, monospace=Courier|Georgia, serif=Georgia|Impact, sans-serif=Impact|Lucida Console, Monaco, monospace=Lucida Console|Lucida Sans Unicode, Lucida Grande, sans-serif=Lucida Sans Unicode|Times New Roman, Times, serif=Times New Roman|Verdana, Geneva, sans-serif=Verdana}
       decoration { label: Decoration; widget: select; options: none=None|underline=Underline }
       linksColor { label: Link Color; extend: color }
       linksDecoration { label: Underlined Links?; extend: decoration }
@@ -218,13 +150,6 @@
         theme: frameTheme
       }
 
-      footerBlock {
-        label: Giga Footer Block;
-        properties: socialIconType=colors fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=false inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=false instUrl youVisible=false youUrl longTextStyle leftLongText rightLongText backgroundColor logoImage;
-        variant:socialIconType;
-        theme: contentTheme
-      }
-
       bigSocialBlock {
         label: Big Social Block;
         properties: bigSocialIconType=rdcol bigSocialIconSize=48 fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=true inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=true instUrl youVisible=true youUrl longTextStyle longText;
@@ -308,7 +233,6 @@
       tripleArticleBlock:preview,
       titleBlock:preview,
       gigaTitleBlock:preview,
-      footerBlock:preview,
       socialBlock:preview,
       buttonBlock:preview,
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
@@ -446,14 +370,6 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=footerBlock] .links-color a,
-    [data-ko-block=footerBlock] .links-color a:link,
-    [data-ko-block=footerBlock] .links-color a:visited,
-    [data-ko-block=footerBlock] .links-color a:hover {
-      color: #3f3f3f;
-      -ko-color: @longTextStyle.linksColor;
-      text-decoration: underline;
-    }
 
     [data-ko-block=doubleImageBlock] a,
     [data-ko-block=doubleImageBlock] a:link,
@@ -1715,110 +1631,6 @@
     </td></tr>
     </table>
     <!-- /socialBlock -->
-    
-
-    
-    <!-- footerBlock -->
-    <table role="presentation" class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf" style="background-color: #bfbfbf; -ko-background-color: @[externalBackgroundColor]; -ko-attr-bgcolor: @[externalBackgroundColor]" data-ko-block="footerBlock">
-      <tr><td class="vb-outer" align="center" valign="top" style="padding-left: 9px; padding-right: 9px; font-size: 0; height: 4px; -ko-height: @[spacerSize]px; -ko-attr-height: @[spacerSize]" height="4">
-      <!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]--><!--
-      --><div style="margin: 0 auto; max-width: 570px; -mru-width: 0px"><table role="presentation" border="0" cellpadding="0" cellspacing="9" style="border-collapse: separate; width: 100%; background-color: #ffffff; -ko-background-color: @[backgroundColor]; -ko-attr-bgcolor: @[backgroundColor]; mso-cellspacing: 9px; border-spacing: 9px; max-width: 570px; -mru-width: 0px" bgcolor="#ffffff" width="570" class="vb-row">
-        
-        <tr>
-        <td width="100%" height="4" style="padding: 0; font-size:1px; line-height: 1px; width: 100%; line-height: 4px; -ko-line-height: @[spacerSize]px; -ko-attr-height: @[spacerSize]">&nbsp;</td>
-      </tr>
-        <tr>
-      <td align="center" valign="top" style="font-size: 0"><div style="width:100%; max-width: 552px; -mru-width: 0px"><!--[if (gte mso 9)|(lte ie 8)]><table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="552"><tr><![endif]--><!--
-        --><!--
-        --><!--[if (gte mso 9)|(lte ie 8)]><td align="left" valign="top" width="368"><![endif]--><!--
-      --><div style="display:inline-block; vertical-align:top; width: 100%; max-width: 368px; -mru-width: 0px; min-width: calc(368 * 100% / 552); -ko-min-width: @['calc(' + (368) * 100 / 552 + '%)']; max-width: calc(100%); -ko-max-width: @['calc(100%)']; width: calc(552 * 552px - 552 * 100%); -ko-width: @['calc('+ 552 * 552 + 'px - ' + 552 * 100 +'%)']" class="mobile-full"><!--
-        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; -yandex-p: calc(2px - 3%)" width="368" align="left">
-          
-            <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: normal; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="leftLongText">
-              <p>GIGA German Institute of Global and Area Studies<br>Leibniz-Institut für Globale und Regionale Studien</p>
-              <p>Neuer Jungfernsteg 21 <br> 20354 Hamburg</p>
-              <p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a></p>
-              <p><a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p>
-            </td></tr>
-          
-        </table><!--
-      --></div><!--[if (gte mso 9)|(lte ie 8)]></td><![endif]--><!--
-          --><!--[if (gte mso 9)|(lte ie 8)]><td align="left" valign="top" width="184"><![endif]--><!--
-      --><div style="display:inline-block; vertical-align:top; width: 100%; max-width: 184px; -mru-width: 0px; min-width: calc(184 * 100% / 552); -ko-min-width: @['calc(' + (184) * 100 / 552 + '%)']; max-width: calc(100%); -ko-max-width: @['calc(100%)']; width: calc(552 * 552px - 552 * 100%); -ko-width: @['calc('+ 552 * 552 + 'px - ' + 552 * 100 +'%)']" class="mobile-full"><!--
-        --><table role="presentation" class="vb-content" border="0" cellspacing="9" cellpadding="0" style="border-collapse: separate; width: 100%; mso-cellspacing: 9px; border-spacing: 9px; -yandex-p: calc(2px - 3%)" width="184" align="left">
-          
-            <tr data-ko-display="socialIconType eq 'colors'"><td width="100%" valign="top" style="font-weight: normal; text-align: lefts" align="lefts" class="links-color socialLinks mobile-textcenter">
-              
-                <span data-ko-wrap="false" data-ko-display="fbVisible">&nbsp;</span><a href data-ko-display="fbVisible" style="background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #3b5998; border-radius: 50px; -ko-attr-href: @[fbUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/fb-colors-96.png" width="32" height="32" alt="Facebook"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="twVisible">&nbsp;</span><a href data-ko-display="twVisible" style="background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #4099FF; border-radius: 50px; -ko-attr-href: @[twUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/tw-colors-96.png" width="32" height="32" alt="Twitter"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="ggVisible">&nbsp;</span><a href data-ko-display="ggVisible" style="background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #d34836; border-radius: 50px; -ko-attr-href: @[ggUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/gg-colors-96.png" width="32" height="32" alt="Google"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="webVisible" style="display: none">&nbsp;</span><a href data-ko-display="webVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #606060; border-radius: 50px; -ko-attr-href: @[webUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/web-colors-96.png" width="32" height="32" alt="Web"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="waVisible" style="display: none">&nbsp;</span><a href data-ko-display="waVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #25d366; border-radius: 50px; -ko-attr-href: @[waUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/wa-colors-96.png" width="32" height="32" alt="Whatsapp"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="tgVisible" style="display: none">&nbsp;</span><a href data-ko-display="tgVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #2da5e1; border-radius: 50px; -ko-attr-href: @[tgUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/tg-colors-96.png" width="32" height="32" alt="Telegram"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="inVisible" style="display: none">&nbsp;</span><a href data-ko-display="inVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #007bb6; border-radius: 50px; -ko-attr-href: @[inUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/in-colors-96.png" width="32" height="32" alt="Linkedin"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="piVisible" style="display: none">&nbsp;</span><a href data-ko-display="piVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #C92228; border-radius: 50px; -ko-attr-href: @[piUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/pi-colors-96.png" width="32" height="32" alt="Pinterest"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="flVisible" style="display: none">&nbsp;</span><a href data-ko-display="flVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #ff0084; border-radius: 50px; -ko-attr-href: @[flUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/fl-colors-96.png" width="32" height="32" alt="Flickr"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="viVisible" style="display: none">&nbsp;</span><a href data-ko-display="viVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #45bbff; border-radius: 50px; -ko-attr-href: @[viUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/vi-colors-96.png" width="32" height="32" alt="Vimeo"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="instVisible" style="display: none">&nbsp;</span><a href data-ko-display="instVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #bc2a8d; border-radius: 50px; -ko-attr-href: @[instUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/inst-colors-96.png" width="32" height="32" alt="Instagram"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="youVisible" style="display: none">&nbsp;</span><a href data-ko-display="youVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #cd201f; border-radius: 50px; -ko-attr-href: @[youUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/you-colors-96.png" width="32" height="32" alt="Youtube"></a>
-              
-            </td></tr>
-            <tr data-ko-display="socialIconType eq 'bw'" style="display: none"><td width="100%" valign="top" style="font-weight: normal; text-align: left" align="left" class="links-color socialLinks mobile-textcenter">
-              
-                <span data-ko-wrap="false" data-ko-display="fbVisible">&nbsp;</span><a href data-ko-display="fbVisible" style="background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[fbUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/fb-bw-96.png" width="32" height="32" alt="Facebook"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="twVisible">&nbsp;</span><a href data-ko-display="twVisible" style="background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[twUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/tw-bw-96.png" width="32" height="32" alt="Twitter"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="ggVisible">&nbsp;</span><a href data-ko-display="ggVisible" style="background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[ggUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/gg-bw-96.png" width="32" height="32" alt="Google"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="webVisible" style="display: none">&nbsp;</span><a href data-ko-display="webVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[webUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/web-bw-96.png" width="32" height="32" alt="Web"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="waVisible" style="display: none">&nbsp;</span><a href data-ko-display="waVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[waUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/wa-bw-96.png" width="32" height="32" alt="Whatsapp"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="tgVisible" style="display: none">&nbsp;</span><a href data-ko-display="tgVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[tgUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/tg-bw-96.png" width="32" height="32" alt="Telegram"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="inVisible" style="display: none">&nbsp;</span><a href data-ko-display="inVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[inUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/in-bw-96.png" width="32" height="32" alt="Linkedin"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="piVisible" style="display: none">&nbsp;</span><a href data-ko-display="piVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[piUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/pi-bw-96.png" width="32" height="32" alt="Pinterest"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="flVisible" style="display: none">&nbsp;</span><a href data-ko-display="flVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[flUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/fl-bw-96.png" width="32" height="32" alt="Flickr"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="viVisible" style="display: none">&nbsp;</span><a href data-ko-display="viVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[viUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/vi-bw-96.png" width="32" height="32" alt="Vimeo"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="instVisible" style="display: none">&nbsp;</span><a href data-ko-display="instVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[instUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/inst-bw-96.png" width="32" height="32" alt="Instagram"></a>
-              
-                <span data-ko-wrap="false" data-ko-display="youVisible" style="display: none">&nbsp;</span><a href data-ko-display="youVisible" style="display: none; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7), #818181; border-radius: 50px; -ko-attr-href: @[youUrl]"><img border="0" style="display: inline-block; vertical-align: top; padding-bottom: 0px" src="img/icons/you-bw-96.png" width="32" height="32" alt="Youtube"></a>
-              
-            </td></tr>
-            <tr style="text-align: left"><td width="100%" valign="top" align="left" class="links-color" style="text-align: left"><!--[if (lte ie 8)]><div style="display: inline-block; width: 140px; -mru-width: 0px"><![endif]--><a href data-ko-link="logoImage.url"><img alt border="0" hspace="0" align="left" vspace="0" style="vertical-align:top; height: auto; margin: 0 auto; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-attr-alt: @[logoImage.alt == '' ? null : logoImage.alt]; width: 100%; max-width: 140px; height: auto; -ko-attr-height: @[imageHeight]" data-ko-editable="logoImage.src" width="140" height="41" src="https://mosaico.io/srv/f-default/img?method=placeholder&params=166%2C160"></a><!--[if (lte ie 8)]></div><![endif]--></td></tr>
-              <tr><td class="long-text links-color" width="100%" valign="top" style="font-weight: normal; color: #3f3f3f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: normal; text-align: left; -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face; -ko-line-height: @[longTextStyle.lineHeight]" align="left" data-ko-editable="rightLongText">
-              </td></tr>
-          
-        </table><!--
-      --></div><!--[if (gte mso 9)|(lte ie 8)]></td><![endif]--><!--
-        --><!--
-      --><!--[if (gte mso 9)|(lte ie 8)]></tr></table><![endif]--></div></td>
-    </tr>
-        <tr>
-        <td width="100%" height="4" style="padding: 0; font-size:1px; line-height: 1px; width: 100%; line-height: 4px; -ko-line-height: @[spacerSize]px; -ko-attr-height: @[spacerSize]">&nbsp;</td>
-      </tr>
-      
-      </table></div><!--
-    --><!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
-    </td></tr>
-    </table>
-    <!-- /footerBlock -->
     
 
   </div>
