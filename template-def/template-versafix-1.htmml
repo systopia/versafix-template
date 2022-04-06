@@ -218,13 +218,6 @@
         theme: frameTheme
       }
 
-      footerBlock {
-        label: Giga Footer Block;
-        properties: socialIconType=colors fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=false inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=false instUrl youVisible=false youUrl longTextStyle leftLongText rightLongText backgroundColor logoImage;
-        variant:socialIconType;
-        theme: contentTheme
-      }
-
       bigSocialBlock {
         label: Big Social Block;
         properties: bigSocialIconType=rdcol bigSocialIconSize=48 fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=true inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=true instUrl youVisible=true youUrl longTextStyle longText;
@@ -308,7 +301,6 @@
       tripleArticleBlock:preview,
       titleBlock:preview,
       gigaTitleBlock:preview,
-      footerBlock:preview,
       socialBlock:preview,
       buttonBlock:preview,
       titleBlock:preview { -ko-background-color: @[backgroundColor] }
@@ -446,14 +438,6 @@
       text-decoration: underline;
     }
 
-    [data-ko-block=footerBlock] .links-color a,
-    [data-ko-block=footerBlock] .links-color a:link,
-    [data-ko-block=footerBlock] .links-color a:visited,
-    [data-ko-block=footerBlock] .links-color a:hover {
-      color: #3f3f3f;
-      -ko-color: @longTextStyle.linksColor;
-      text-decoration: underline;
-    }
 
     [data-ko-block=doubleImageBlock] a,
     [data-ko-block=doubleImageBlock] a:link,
@@ -1223,39 +1207,6 @@
             </custom-row>
           </column-content><!--
         --></columns>
-      </block-inner>
-    </block>
-
-    <block name="footerBlock" height="4" height-prop="spacerSize" label="Giga Footer Block"z>
-      <block-inner inner-padding="9" inner-class="vb-row">
-        <spacer height="4" height-prop="spacerSize"></spacer>
-        <columns><!--
-        --><column-content width="368" spacing="9">
-            <long-text fixed-align="left" editable="leftLongText">
-              <p>GIGA German Institute of Global and Area Studies</br>Leibniz-Institut für Globale und Regionale Studien</p>
-              <p>Neuer Jungfernsteg 21 </br> 20354 Hamburg</p>
-              <p><a href="https://giga-hamburg.de">www.giga-hamburg.de</a></p>
-              <p><a href="mailto: events@giga-hamburg.de"> events@giga-hamburg.de</a></p>
-            </long-text>
-          </column-content><!--
-          --><column-content width="184" spacing="9">
-            <custom-row if="socialIconType eq 'colors'" align="lefts" class="links-color socialLinks mobile-textcenter">
-              <repeater prefix="fb,tw,gg,web,wa,tg,in,pi,fl,vi,inst,you" default="if,if,if,false if,false if,false if,false if,false if,false if,false if,false if,false if" color="#3b5998,#4099FF,#d34836,#606060,#25d366,#2da5e1,#007bb6,#C92228,#ff0084,#45bbff,#bc2a8d,#cd201f" name="Facebook,Twitter,Google,Web,Whatsapp,Telegram,Linkedin,Pinterest,Flickr,Vimeo,Instagram,Youtube">
-                <social-icon {{default}}="{{prefix}}Visible" href-prop="{{prefix}}Url" color="{{color}}" src="img/icons/{{prefix}}-colors-96.png" alt="{{name}}"></social-icon>
-              </repeater>
-            </custom-row>
-            <custom-row false if="socialIconType eq 'bw'" align="left" class="links-color socialLinks mobile-textcenter">
-              <repeater prefix="fb,tw,gg,web,wa,tg,in,pi,fl,vi,inst,you" default="if,if,if,false if,false if,false if,false if,false if,false if,false if,false if,false if" color="#3b5998,#4099FF,#d34836,#606060,#25d366,#2da5e1,#007bb6,#C92228,#ff0084,#45bbff,#bc2a8d,#cd201f" name="Facebook,Twitter,Google,Web,Whatsapp,Telegram,Linkedin,Pinterest,Flickr,Vimeo,Instagram,Youtube">
-                <social-icon {{default}}="{{prefix}}Visible" href-prop="{{prefix}}Url" color="#818181" src="img/icons/{{prefix}}-bw-96.png" alt="{{name}}"></social-icon>
-              </repeater>
-            </custom-row>
-            <linked-img editable="logoImage" align="left" width="140" height="41" height-prop="imageHeight"
-              src="https://mosaico.io/srv/f-default/img?method=placeholder&amp;params=166%2C160"></linked-img>
-              <long-text fixed-align="left" editable="rightLongText">
-              </long-text>
-          </column-content><!--
-        --></columns>
-        <spacer height="4" height-prop="spacerSize"></spacer>
       </block-inner>
     </block>
 
