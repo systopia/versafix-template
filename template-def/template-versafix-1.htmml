@@ -117,7 +117,7 @@
       
       fbVisible { label: Facebook; extend: visible }
       twVisible { label: Twitter; extend: visible }
-      ggVisible { label: Mastodon; extend: visible }
+      msVisible { label: Mastodon; extend: visible }
       inVisible { label: LinkedIn; extend: visible }
       piVisible { label: Pinterest; extend: visible }
       flVisible { label: Flickr; extend: visible }
@@ -129,7 +129,7 @@
       youVisible { label: YouTube; extend: visible }
       fbUrl { label: Facebook Link; extend: url }
       twUrl { label: Twitter Link; extend: url}
-      ggUrl { label: Mastodon Link; extend: url}
+      msUrl { label: Mastodon Link; extend: url}
       inUrl { label: LinkedIn Link; extend: url}
       piUrl { label: Pinterest Link; extend: url}
       flUrl { label: Flickr Link; extend: url}
@@ -142,14 +142,14 @@
 
       socialBlock {
         label: Social Block;
-        properties: socialIconType=colors fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=false inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=false instUrl youVisible=false youUrl longTextStyle longText backgroundColor;
+        properties: socialIconType=colors fbVisible=true fbUrl twVisible=true twUrl msVisible=true msUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=false inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=false instUrl youVisible=false youUrl longTextStyle longText backgroundColor;
         variant:socialIconType;
         theme: frameTheme
       }
 
       bigSocialBlock {
         label: Big Social Block;
-        properties: bigSocialIconType=rdcol bigSocialIconSize=48 fbVisible=true fbUrl twVisible=true twUrl ggVisible=true ggUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=true inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=true instUrl youVisible=true youUrl longTextStyle longText;
+        properties: bigSocialIconType=rdcol bigSocialIconSize=48 fbVisible=true fbUrl twVisible=true twUrl msVisible=true msUrl webVisible=false webUrl waVisible=false waUrl tgVisible=false tgUrl inVisible=true inUrl piVisible=false piUrl flVisible=false flUrl viVisible=false viUrl instVisible=true instUrl youVisible=true youUrl longTextStyle longText;
         variant: bigSocialIconType;
         theme: contentTheme
       }
@@ -165,14 +165,14 @@
       shareBlock fbVisible { label: Facebook; }
       shareBlock twVisible { label: Twitter }
       shareBlock inVisible { label: LinkedIn }
-      shareBlock ggVisible { label: Mastodon }
+      shareBlock msVisible { label: Mastodon }
       shareBlock piVisible { label: Pinterest }
       /* shareBlock shareUrlType { label: Share URL; widget: select; options:newsletter=Newsletter|custom=Custom;} */
       shareBlock customUrl { label: Share Link; }
       shareBlock {
         label: Share Block;
         /* shareUrlType=newsletter */
-        properties: shareButtonType=reverse fbVisible=true twVisible=true inVisible=false ggVisible=true piVisible=false customUrl;
+        properties: shareButtonType=reverse fbVisible=true twVisible=true inVisible=false msVisible=true piVisible=false customUrl;
         variant: shareButtonType;
         theme: contentTheme;
       }
