@@ -822,7 +822,18 @@
 
   </div>
 
+
+  <block name="footerBlock" label="Unsubscribe Block" theme="frameTheme">
+    <block-inner inner-padding="0" inner-class="vb-row">
+      <content spacing="9" width="552"  td-styles="padding: 0 9px">
+        <linked-img width="300" height="169" align="center" false if="_root_.sponsor.visible" content="_root_.sponsor" src="img/snv_header.gif" alt="snv header"/>
+      </content>
+    </block-inner>
+  </block>
+
+
   <div data-ko-container="main" data-ko-wrap="false">
+
 
     <block name="logoBlock" label="Logo Block">
       <block-inner if="externalBackgroundVisible" inner-padding="9" inner-class="vb-row">
